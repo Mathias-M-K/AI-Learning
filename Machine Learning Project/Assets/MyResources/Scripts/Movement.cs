@@ -15,7 +15,7 @@ namespace MyResources.Scripts
         // Start is called before the first frame update
         private void Start()
         {
-            Debug.Log("Hey World");
+            Debug.Log("Hey Idiot");
         }
 
 
