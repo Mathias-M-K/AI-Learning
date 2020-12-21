@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.3/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.3/resharper-host/local/Transient/Rider/v203/SolutionCaches/_Machine Learning Project.-1943972730.00" t="ExcludeRecursive" />
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\mathi\AppData\local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\mathi\AppData\local\JetBrains\Rider2020.3\resharper-host\local\Transient\Rider\v203\SolutionCaches\_Machine Learning Project.-1216940842.00" t="ExcludeRecursive" />
+    <e p="C:\Users\mathi\Documents\GitHub\AI-Learning\Machine Learning Project" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="MyResources" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="CameraFollow.cs" t="Include" />
-            <e p="Movement.cs" t="Include" />
+        <e p="Course Library" t="Include">
+          <e p="_Source_Files" t="Include">
+            <e p="_LICENSE.txt" t="Include" />
           </e>
         </e>
-        <e p="Stylized Astronaut" t="Include">
-          <e p="Character" t="Include">
-            <e p="Player.cs" t="Include" />
-            <e p="ThirdPersonCamera.cs" t="Include" />
-          </e>
+        <e p="Scripts" t="Include">
+          <e p="CameraMovement.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
         </e>
+        <e p="SphereFollower.cs" t="Include" />
       </e>
       <e p="Machine Learning Project.sln" t="IncludeFlat" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
