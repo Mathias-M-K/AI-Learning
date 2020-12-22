@@ -2,66 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6173b77-f2d1-4953-b6d9-9d1959609f93" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyResources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyResources/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyResources/Materials/PlayerMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyResources/Materials/PlayerMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyResources/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyResources/Scripts/CameraFollow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyResources/Scripts/CameraFollow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyResources/Scripts/Movement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyResources/Scripts/Movement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Astronaut.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Astronaut.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/CharacterController.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/CharacterController.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Materials/Grey_Mat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Materials/Grey_Mat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Materials/Player_Grey.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Materials/Player_Grey.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Materials/Player_Helm.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Materials/Player_Helm.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Materials/Player_White.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Materials/Player_White.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Materials/White_Mat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Materials/White_Mat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Materials/Yellow_Mat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Materials/Yellow_Mat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/Player.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/ThirdPersonCamera.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Character/ThirdPersonCamera.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Demo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Demo/DemoScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Demo/DemoScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Demo/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Demo/Materials/Checker_Mat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Demo/Materials/Checker_Mat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Demo/Materials/Checker_Tex.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Demo/Materials/Checker_Tex.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Stylized Astronaut.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stylized Astronaut/Stylized Astronaut.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Course Library/Vehicles/Veh_Ute_Red_Z.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Course Library/Vehicles/Veh_Ute_Red_Z.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Course Library/_Source_Files/FBX/road_straight_mesh.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Course Library/_Source_Files/FBX/road_straight_mesh.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Track.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Track.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +75,8 @@
       <workItem from="1608332003295" duration="29000" />
       <workItem from="1608332412632" duration="605000" />
       <workItem from="1608334047310" duration="597000" />
-      <workItem from="1608554497798" duration="15339000" />
+      <workItem from="1608554497798" duration="15946000" />
+      <workItem from="1608599398622" duration="2572000" />
     </task>
     <servers />
   </component>
