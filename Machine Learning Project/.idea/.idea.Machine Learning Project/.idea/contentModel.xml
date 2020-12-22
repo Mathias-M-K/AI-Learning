@@ -13,9 +13,10 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CameraMovement.cs" t="Include" />
+          <e p="GameController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="WheelMovement.cs" t="Include" />
         </e>
-        <e p="SphereFollower.cs" t="Include" />
       </e>
       <e p="Machine Learning Project.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
