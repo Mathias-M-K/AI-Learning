@@ -12,129 +12,163 @@
             <e p="_LICENSE.txt" t="Include" />
           </e>
         </e>
-        <e p="Modern UI Pack" t="Include">
+        <e p="ML-Agents" t="Include">
           <e p="Editor" t="Include">
-            <e p="ContextMenu.cs" t="Include" />
-            <e p="ExtendedColorPicker.cs" t="Include" />
-            <e p="InitMUIP.cs" t="Include" />
-            <e p="UIManagerEditor.cs" t="Include" />
+            <e p="DisableBurstFromMenu.cs" t="Include" />
+            <e p="Tests" t="Include">
+              <e p="StandaloneBuildTest.cs" t="Include" />
+            </e>
           </e>
-          <e p="Read Me.txt" t="Include" />
-          <e p="Scripts" t="Include">
-            <e p="Animated Icon" t="Include">
-              <e p="AnimatedIconHandler.cs" t="Include" />
+          <e p="Examples" t="Include">
+            <e p="3DBall" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Ball3DAgent.cs" t="Include" />
+                <e p="Ball3DHardAgent.cs" t="Include" />
+              </e>
             </e>
-            <e p="Button" t="Include">
-              <e p="ButtonManager.cs" t="Include" />
-              <e p="ButtonManagerBasic.cs" t="Include" />
-              <e p="ButtonManagerBasicEditor.cs" t="Include" />
-              <e p="ButtonManagerBasicIcon.cs" t="Include" />
-              <e p="ButtonManagerBasicIconEditor.cs" t="Include" />
-              <e p="ButtonManagerBasicWithIcon.cs" t="Include" />
-              <e p="ButtonManagerBasicWithIconEditor.cs" t="Include" />
-              <e p="ButtonManagerEditor.cs" t="Include" />
-              <e p="ButtonManagerIcon.cs" t="Include" />
-              <e p="ButtonManagerIconEditor.cs" t="Include" />
-              <e p="ButtonManagerWithIcon.cs" t="Include" />
-              <e p="ButtonManagerWithIconEditor.cs" t="Include" />
+            <e p="Basic" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="BasicActuatorComponent.cs" t="Include" />
+                <e p="BasicController.cs" t="Include" />
+                <e p="BasicSensorComponent.cs" t="Include" />
+              </e>
             </e>
-            <e p="Context Menu" t="Include">
-              <e p="ContextMenuContent.cs" t="Include" />
-              <e p="ContextMenuManager.cs" t="Include" />
-              <e p="ContextMenuManagerEditor.cs" t="Include" />
+            <e p="Bouncer" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="BouncerAgent.cs" t="Include" />
+                <e p="BouncerTarget.cs" t="Include" />
+              </e>
             </e>
-            <e p="Demo" t="Include">
-              <e p="DemoListShadow.cs" t="Include" />
-              <e p="LaunchURL.cs" t="Include" />
+            <e p="Crawler" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="CrawlerAgent.cs" t="Include" />
+              </e>
             </e>
-            <e p="Dropdown" t="Include">
-              <e p="CustomDropdown.cs" t="Include" />
-              <e p="CustomDropdownEditor.cs" t="Include" />
-              <e p="DropdownMultiSelect.cs" t="Include" />
-              <e p="DropdownMultiSelectEditor.cs" t="Include" />
+            <e p="FoodCollector" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="FoodCollectorAgent.cs" t="Include" />
+                <e p="FoodCollectorArea.cs" t="Include" />
+                <e p="FoodCollectorSettings.cs" t="Include" />
+                <e p="FoodLogic.cs" t="Include" />
+              </e>
             </e>
-            <e p="Fixes" t="Include">
-              <e p="UIElementInFront.cs" t="Include" />
+            <e p="GridWorld" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="GridAgent.cs" t="Include" />
+                <e p="GridArea.cs" t="Include" />
+                <e p="GridSettings.cs" t="Include" />
+              </e>
             </e>
-            <e p="Horizontal Selector" t="Include">
-              <e p="HorizontalSelector.cs" t="Include" />
-              <e p="HorizontalSelectorEditor.cs" t="Include" />
+            <e p="Hallway" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="HallwayAgent.cs" t="Include" />
+                <e p="HallwaySettings.cs" t="Include" />
+              </e>
             </e>
-            <e p="Input Field" t="Include">
-              <e p="CustomInputField.cs" t="Include" />
+            <e p="Match3" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Match3Agent.cs" t="Include" />
+                <e p="Match3Board.cs" t="Include" />
+                <e p="Match3Drawer.cs" t="Include" />
+                <e p="Match3TileSelector.cs" t="Include" />
+              </e>
             </e>
-            <e p="Modal Window" t="Include">
-              <e p="ModalWindowManager.cs" t="Include" />
-              <e p="ModalWindowManagerEditor.cs" t="Include" />
+            <e p="PushBlock" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="GoalDetect.cs" t="Include" />
+                <e p="PushAgentBasic.cs" t="Include" />
+                <e p="PushBlockSettings.cs" t="Include" />
+              </e>
             </e>
-            <e p="Notification" t="Include">
-              <e p="NotificationManager.cs" t="Include" />
-              <e p="NotificationManagerEditor.cs" t="Include" />
-              <e p="NotificationStacking.cs" t="Include" />
+            <e p="Pyramids" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="PyramidAgent.cs" t="Include" />
+                <e p="PyramidArea.cs" t="Include" />
+                <e p="PyramidSwitch.cs" t="Include" />
+              </e>
             </e>
-            <e p="Progress Bar" t="Include">
-              <e p="PBFilled.cs" t="Include" />
-              <e p="ProgressBar.cs" t="Include" />
-              <e p="ProgressBarEditor.cs" t="Include" />
+            <e p="Reacher" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="ReacherAgent.cs" t="Include" />
+                <e p="ReacherGoal.cs" t="Include" />
+              </e>
             </e>
-            <e p="Rendering" t="Include">
-              <e p="Ripple.cs" t="Include" />
-              <e p="UIGradient.cs" t="Include" />
-              <e p="UIGradientEditor.cs" t="Include" />
+            <e p="SharedAssets" t="Include">
+              <e p="Materials" t="Include">
+                <e p="GridPatternShader.shader" t="Include" />
+                <e p="ShaderOutline.shader" t="Include" />
+                <e p="ShaderRadialGrid.shader" t="Include" />
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="AdjustTrainingTimescale.cs" t="Include" />
+                <e p="Area.cs" t="Include" />
+                <e p="CameraFollow.cs" t="Include" />
+                <e p="DirectionIndicator.cs" t="Include" />
+                <e p="FlyCamera.cs" t="Include" />
+                <e p="GroundContact.cs" t="Include" />
+                <e p="JointDriveController.cs" t="Include" />
+                <e p="ModelOverrider.cs" t="Include" />
+                <e p="Monitor.cs" t="Include" />
+                <e p="OrientationCubeController.cs" t="Include" />
+                <e p="ProjectSettingsOverrides.cs" t="Include" />
+                <e p="SensorBase.cs" t="Include" />
+                <e p="TargetContact.cs" t="Include" />
+                <e p="TargetController.cs" t="Include" />
+              </e>
             </e>
-            <e p="Slider" t="Include">
-              <e p="RadialSlider.cs" t="Include" />
-              <e p="RadialSliderEditor.cs" t="Include" />
-              <e p="RangeMaxSlider.cs" t="Include" />
-              <e p="RangeMinSlider.cs" t="Include" />
-              <e p="RangeSlider.cs" t="Include" />
-              <e p="SliderManager.cs" t="Include" />
-              <e p="SliderManagerEditor.cs" t="Include" />
+            <e p="Soccer" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="AgentSoccer.cs" t="Include" />
+                <e p="SoccerBallController.cs" t="Include" />
+                <e p="SoccerFieldArea.cs" t="Include" />
+                <e p="SoccerSettings.cs" t="Include" />
+              </e>
             </e>
-            <e p="Switch" t="Include">
-              <e p="SwitchManager.cs" t="Include" />
-              <e p="SwitchManagerEditor.cs" t="Include" />
+            <e p="Startup" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Startup.cs" t="Include" />
+              </e>
             </e>
-            <e p="Toggle" t="Include">
-              <e p="ToggleAnim.cs" t="Include" />
+            <e p="Template" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="TemplateAgent.cs" t="Include" />
+              </e>
             </e>
-            <e p="Tooltip" t="Include">
-              <e p="TooltipContent.cs" t="Include" />
-              <e p="TooltipManager.cs" t="Include" />
-              <e p="TooltipManagerEditor.cs" t="Include" />
+            <e p="Tennis" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="HitWall.cs" t="Include" />
+                <e p="TennisAgent.cs" t="Include" />
+                <e p="TennisArea.cs" t="Include" />
+              </e>
             </e>
-            <e p="UI Manager" t="Include">
-              <e p="UIManager.cs" t="Include" />
-              <e p="UIManagerAnimatedIcon.cs" t="Include" />
-              <e p="UIManagerButton.cs" t="Include" />
-              <e p="UIManagerButtonEditor.cs" t="Include" />
-              <e p="UIManagerContextMenu.cs" t="Include" />
-              <e p="UIManagerDropdown.cs" t="Include" />
-              <e p="UIManagerHSelector.cs" t="Include" />
-              <e p="UIManagerInputField.cs" t="Include" />
-              <e p="UIManagerModalWindow.cs" t="Include" />
-              <e p="UIManagerNotification.cs" t="Include" />
-              <e p="UIManagerProgressBar.cs" t="Include" />
-              <e p="UIManagerProgressBarLoop.cs" t="Include" />
-              <e p="UIManagerProgressBarLoopEditor.cs" t="Include" />
-              <e p="UIManagerScrollbar.cs" t="Include" />
-              <e p="UIManagerSlider.cs" t="Include" />
-              <e p="UIManagerSliderEditor.cs" t="Include" />
-              <e p="UIManagerSwitch.cs" t="Include" />
-              <e p="UIManagerToggle.cs" t="Include" />
-              <e p="UIManagerTooltip.cs" t="Include" />
+            <e p="Walker" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="WalkerAgent.cs" t="Include" />
+              </e>
             </e>
-            <e p="Window" t="Include">
-              <e p="WindowDragger.cs" t="Include" />
-              <e p="WindowManager.cs" t="Include" />
-              <e p="WindowManagerButton.cs" t="Include" />
-              <e p="WindowManagerEditor.cs" t="Include" />
+            <e p="WallJump" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="WallJumpAgent.cs" t="Include" />
+                <e p="WallJumpSettings.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Worm" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="WormAgent.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="TestScenes" t="Include">
+            <e p="TestCompressedTexture" t="Include">
+              <e p="TestTextureSensor.cs" t="Include" />
+              <e p="TestTextureSensorComponent.cs" t="Include" />
             </e>
           </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="CameraMovement.cs" t="Include" />
           <e p="CameraSwitcher.cs" t="Include" />
+          <e p="DrivingAgent.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="VehicleUI.cs" t="Include" />
@@ -219,6 +253,37 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Unity.ML-Agents.Extensions.csproj" t="IncludeRecursive" />
+      <e p="Unity.ML-Agents.Extensions.Editor.csproj" t="IncludeRecursive" />
+    </e>
+    <e p="C:\Users\mathi\Downloads\ml-agents-release_11\com.unity.ml-agents.extensions\Editor" t="Include">
+      <e p="EditorExample.cs" t="Include" />
+      <e p="RigidBodySensorComponentEditor.cs" t="Include" />
+    </e>
+    <e p="C:\Users\mathi\Downloads\ml-agents-release_11\com.unity.ml-agents.extensions\Runtime" t="Include">
+      <e p="AssemblyInfo.cs" t="Include" />
+      <e p="Match3" t="Include">
+        <e p="AbstractBoard.cs" t="Include" />
+        <e p="Match3Actuator.cs" t="Include" />
+        <e p="Match3ActuatorComponent.cs" t="Include" />
+        <e p="Match3Sensor.cs" t="Include" />
+        <e p="Match3SensorComponent.cs" t="Include" />
+        <e p="Move.cs" t="Include" />
+      </e>
+      <e p="Sensors" t="Include">
+        <e p="ArticulationBodyJointExtractor.cs" t="Include" />
+        <e p="ArticulationBodyPoseExtractor.cs" t="Include" />
+        <e p="ArticulationBodySensorComponent.cs" t="Include" />
+        <e p="CountingGridSensor.cs" t="Include" />
+        <e p="GridSensor.cs" t="Include" />
+        <e p="IJointExtractor.cs" t="Include" />
+        <e p="PhysicsBodySensor.cs" t="Include" />
+        <e p="PhysicsSensorSettings.cs" t="Include" />
+        <e p="PoseExtractor.cs" t="Include" />
+        <e p="RigidBodyJointExtractor.cs" t="Include" />
+        <e p="RigidBodyPoseExtractor.cs" t="Include" />
+        <e p="RigidBodySensorComponent.cs" t="Include" />
+      </e>
     </e>
   </component>
 </project>
