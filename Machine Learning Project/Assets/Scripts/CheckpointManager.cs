@@ -8,18 +8,17 @@ using UnityEngine;
 public class CheckpointManager : MonoBehaviour
 {
     public GameObject checkpoints;  //The empty gameobject containing all the checkpoints
-
     public TextMeshProUGUI labScreenText;
-    
+
+    public event Action<bool> OnCheckpointHit;  //Return true if the correct checkpoint is hit, false if not
     
     //Lab variables
-    private bool timeStarted = false;
-    private float startTime;
-    
+    private bool _timeStarted = false;
+    private float _startTime;
     
     //Checkpoint variables
     private int _nrOfCheckpoints;
-    private GameObject _currentTarget;
+    public GameObject currentTarget;
 
     private int _currentTargetCount = 0;
     private int CurrentTargetCount
@@ -35,9 +34,8 @@ public class CheckpointManager : MonoBehaviour
     void Start()
     {
         _nrOfCheckpoints = checkpoints.transform.childCount;
-        Debug.Log($"Number of checkpoints: {_nrOfCheckpoints}");
 
-        _currentTarget = checkpoints.transform.GetChild(CurrentTargetCount).gameObject;
+        currentTarget = checkpoints.transform.GetChild(CurrentTargetCount).gameObject;
 
     }
 
@@ -45,24 +43,24 @@ public class CheckpointManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Checkpoint"))
         {
-            Debug.Log(Time.realtimeSinceStartup);
-            
-            if (other.gameObject == _currentTarget)
+            if (other.gameObject == currentTarget)
             {
+                CheckpointHit(true);
                 CurrentTargetCount++;
 
                 if (other.gameObject.name.Equals("Start"))
                 {
-                    if(timeStarted) UpdateLabScreen();
-                    startTime = Time.realtimeSinceStartup;
+                    if(_timeStarted) UpdateLabScreen();
+                    _startTime = Time.realtimeSinceStartup;
                 }
                 else
                 {
-                    timeStarted = true;
+                    _timeStarted = true;
                 }
             }
             else
             {
+                CheckpointHit(false);
                 CurrentTargetCount--;
             }
         }
@@ -72,12 +70,19 @@ public class CheckpointManager : MonoBehaviour
     {
 
         if (_currentTargetCount >= _nrOfCheckpoints) _currentTargetCount = 0;
-        _currentTarget = checkpoints.transform.GetChild(CurrentTargetCount).gameObject;
+        if (_currentTargetCount == -1) _currentTargetCount = _nrOfCheckpoints-1;
+        currentTarget = checkpoints.transform.GetChild(CurrentTargetCount).gameObject;
     }
 
     private void UpdateLabScreen()
     {
-        labScreenText.text = (Time.realtimeSinceStartup - startTime).ToString();
+        labScreenText.text = (Time.realtimeSinceStartup - _startTime).ToString();
     }
-    
+
+
+
+    protected virtual void CheckpointHit(bool obj)
+    {
+        OnCheckpointHit?.Invoke(obj);
+    }
 }

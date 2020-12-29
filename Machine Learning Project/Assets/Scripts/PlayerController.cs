@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -37,14 +38,17 @@ public class PlayerController : MonoBehaviour
     public bool headOnCollision;
     
     //Collision values
-    private Rigidbody rb;
     private bool _headOnCollisionStop;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        GetComponent<CheckpointManager>().OnCheckpointHit += OnCheckpointHit;
     }
 
+    private void OnCheckpointHit(bool i)
+    {
+        Debug.Log($"Whatddup {i}");
+    }
 
     // Update is called once per frame
     void Update()
