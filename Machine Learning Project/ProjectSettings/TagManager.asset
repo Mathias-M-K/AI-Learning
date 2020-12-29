@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Road
   - Wall
+  - badFood
+  - food
+  - wall
+  - agent
+  - ground
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
