@@ -13753,6 +13753,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1854252364}
+--- !u!114 &750576787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750576783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 1
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 0
+      BranchSizes: 01000000
+    VectorActionSize: 01000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 0
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_BehaviorType: 0
+  m_BehaviorName: CarAI
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!114 &750576789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13780,6 +13810,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae657ff28c60514a9580f95e5de66a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
   turnValue: 0
   speed: 0
   maxSpeed: 100
@@ -13806,6 +13840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpoints: {fileID: 1784478678}
   labScreenText: {fileID: 695917118}
+  currentTarget: {fileID: 0}
 --- !u!1 &758418298 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 9054c70a5c9ed454f8ef48a11963db28,
@@ -34399,7 +34434,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601677051}
-  m_LocalRotation: {x: 0.11777539, y: 0.000000016913098, z: -0.0000000020059079, w: 0.99304026}
+  m_LocalRotation: {x: 0.117775396, y: -0.000000017436351, z: 0.0000000020679658,
+    w: 0.99304026}
   m_LocalPosition: {x: -1.1477432, y: 4.9370003, z: -8.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -43840,8 +43876,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069983386}
-  m_LocalRotation: {x: 0.11777539, y: 0.000000016913098, z: -0.0000000020059079, w: 0.99304026}
-  m_LocalPosition: {x: -1.1477432, y: 4.9370003, z: -8.72}
+  m_LocalRotation: {x: -0.0000000018933835, y: 0.99392724, z: -0.11003959, w: -0.000000017101891}
+  m_LocalPosition: {x: -1.1477432, y: 4.9370003, z: 11.100001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -11,7 +11,6 @@
       <Path>Library/PackageCache/com.unity.ide.rider@1.1.4</Path>
       <Path>Library/PackageCache/com.unity.ide.vscode@1.2.3</Path>
       <Path>Library/PackageCache/com.unity.mathematics@1.2.1</Path>
-      <Path>Library/PackageCache/com.unity.ml-agents@1.7.0-preview</Path>
       <Path>Library/PackageCache/com.unity.probuilder@4.4.0</Path>
       <Path>Library/PackageCache/com.unity.progrids@3.0.3-preview.6</Path>
       <Path>Library/PackageCache/com.unity.settings-manager@1.0.3</Path>
@@ -20,7 +19,8 @@
       <Path>Library/PackageCache/com.unity.timeline@1.2.17</Path>
       <Path>Packages</Path>
       <Path>ProjectSettings</Path>
-      <Path>../../../../Downloads/ml-agents-release_11/com.unity.ml-agents.extensions</Path>
+      <Path>../../ml-agents/com.unity.ml-agents</Path>
+      <Path>../../ml-agents/com.unity.ml-agents.extensions</Path>
     </explicitIncludes>
     <explicitExcludes>
       <Path>.idea</Path>
