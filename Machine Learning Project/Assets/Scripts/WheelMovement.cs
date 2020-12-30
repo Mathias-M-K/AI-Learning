@@ -9,12 +9,15 @@ public class WheelMovement : MonoBehaviour
     public GameObject rightFrontWheel;
 
     public float turnMultiplier;
+
+    [Header("Vehicle")] 
+    public VehicleController vehicle;
     
     
     // Update is called once per frame
     void Update()
     {
-        float turnValue = PlayerController.MyPlayerController.turnValue;
+        float turnValue = vehicle.turnValue;
         
         leftFrontWheel.transform.localRotation = Quaternion.Euler(0,turnValue*turnMultiplier,0);
         rightFrontWheel.transform.localRotation = Quaternion.Euler(0,turnValue*turnMultiplier,0);

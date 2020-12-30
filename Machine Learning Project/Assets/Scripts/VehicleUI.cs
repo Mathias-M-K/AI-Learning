@@ -6,20 +6,28 @@ using UnityEngine;
 
 public class VehicleUI : MonoBehaviour
 {
-    public TextMeshProUGUI text;
+    public VehicleController vehicle; 
+    
+    [Header("Car GUI")]
+    public TextMeshProUGUI speedGUI;
+    public TextMeshProUGUI rewardGUI;
+
+    [Header("Screen GUI")] 
+    public TextMeshProUGUI screenReward;
+
+    [Header("Things")] 
+    public float cumulativeReward;
     // Update is called once per frame
     void Update()
     {
-        float speed = PlayerController.MyPlayerController.speed;
-
-        if (speed == 0)
-        {
-            text.text = "";
-        }
-        else
-        {
-            text.text = $"{Math.Round(speed)} km/t"; 
-        }
+        float speed = vehicle.speed;
         
+        speedGUI.text = $"{Math.Round(speed)} km/t"; 
+        
+        rewardGUI.text = vehicle.GetCumulativeReward().ToString();
+
+        cumulativeReward = vehicle.GetCumulativeReward();
+
+        if (screenReward != null)screenReward.text = vehicle.GetCumulativeReward().ToString();
     }
 }

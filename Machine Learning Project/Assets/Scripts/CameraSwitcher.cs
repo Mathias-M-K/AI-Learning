@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class CameraSwitcher : MonoBehaviour
 {
+    public VehicleController vehicle;
     public GameObject driveCam;
     public GameObject reverseCam;
 
     // Update is called once per frame
     void Update()
     {
-        float speed = PlayerController.MyPlayerController.speed;
+        float speed = vehicle.speed;
 
         if (speed < 0)
         {

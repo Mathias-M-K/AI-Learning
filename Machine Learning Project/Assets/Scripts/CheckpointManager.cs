@@ -10,7 +10,7 @@ public class CheckpointManager : MonoBehaviour
     public GameObject checkpoints;  //The empty gameobject containing all the checkpoints
     public TextMeshProUGUI labScreenText;
 
-    public event Action<bool> OnCheckpointHit;  //Return true if the correct checkpoint is hit, false if not
+    public event Action<bool,string> OnCheckpointHit;  //Return true if the correct checkpoint is hit, false if not
     
     //Lab variables
     private bool _timeStarted = false;
@@ -21,7 +21,7 @@ public class CheckpointManager : MonoBehaviour
     public GameObject currentTarget;
 
     private int _currentTargetCount = 0;
-    private int CurrentTargetCount
+    public int CurrentTargetCount
     {
         get => _currentTargetCount;
         set
@@ -45,7 +45,7 @@ public class CheckpointManager : MonoBehaviour
         {
             if (other.gameObject == currentTarget)
             {
-                CheckpointHit(true);
+                CheckpointHit(true, other.gameObject.name);
                 CurrentTargetCount++;
 
                 if (other.gameObject.name.Equals("Start"))
@@ -60,7 +60,7 @@ public class CheckpointManager : MonoBehaviour
             }
             else
             {
-                CheckpointHit(false);
+                CheckpointHit(false, other.gameObject.name);
                 CurrentTargetCount--;
             }
         }
@@ -81,8 +81,8 @@ public class CheckpointManager : MonoBehaviour
 
 
 
-    protected virtual void CheckpointHit(bool obj)
+    protected virtual void CheckpointHit(bool obj, string s)
     {
-        OnCheckpointHit?.Invoke(obj);
+        OnCheckpointHit?.Invoke(obj,s);
     }
 }
