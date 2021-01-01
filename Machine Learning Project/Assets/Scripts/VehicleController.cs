@@ -41,8 +41,7 @@ public class VehicleController : Agent
     public int brake;   //1 = brake, 0 = no brake
     public Vector3 originPos;
     
-    
-    
+
     //Collision values
     private bool _headOnCollisionStop;
     
@@ -56,7 +55,7 @@ public class VehicleController : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        AddReward(-0.05f);
+        //AddReward(-0.005f);
         //turn
         switch (actions.DiscreteActions[0])
         {
@@ -137,15 +136,16 @@ public class VehicleController : Agent
         else
         {
             AddReward(-5);
+            Debug.Log("Reset : Wrong Way");
+            Reset();
         }
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-        
+
+
         //Determining turn-rate based on the current speed of the vehicle
         _maxTurnRateActual = map(Math.Abs(speed), 0, maxSpeed, maxTurnRate, 0);
         if (_maxTurnRateActual < 2) _maxTurnRateActual = 2;
@@ -212,7 +212,6 @@ public class VehicleController : Agent
         {
             if (speed > 0) speed -= brakeSpeed * Time.deltaTime;
             if (speed < 0) speed += brakeSpeed * Time.deltaTime;
-            headOnCollision = true;
         }else if (drive == 1)
         {
             speed += accelerationSpeed * Time.deltaTime;
@@ -268,7 +267,7 @@ public class VehicleController : Agent
         if (other.gameObject.CompareTag("Wall"))
         {
             Debug.Log("Reset : Wall hit");
-            AddReward(-2);
+            AddReward(-10);
             Reset();
             
             

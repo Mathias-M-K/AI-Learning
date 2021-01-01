@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6173b77-f2d1-4953-b6d9-9d1959609f93" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Course Library/_Source_Files/Materials/SimpleTown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Course Library/_Source_Files/Materials/SimpleTown.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Track.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Track.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSwitcher.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WheelMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WheelMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +38,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraSwitcher.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WheelMovement.cs" />
       <option value="$PROJECT_DIR$/../../ml-agents/com.unity.ml-agents/Runtime/Actuators/IActionReceiver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/VehicleUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" />
     </changedPaths>
   </component>
@@ -115,6 +106,7 @@
       <workItem from="1609178487415" duration="7272000" />
       <workItem from="1609254901157" duration="17206000" />
       <workItem from="1609332254037" duration="11034000" />
+      <workItem from="1609412168008" duration="7939000" />
     </task>
     <servers />
   </component>

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+using Random = System.Random;
 
 public class CheckpointManager : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class CheckpointManager : MonoBehaviour
     //Checkpoint variables
     private int _nrOfCheckpoints;
     public GameObject currentTarget;
+    public GameObject prevTarget;
 
     private int _currentTargetCount = 0;
     public int CurrentTargetCount
@@ -41,11 +43,12 @@ public class CheckpointManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Checkpoint"))
+        if (other.gameObject.CompareTag("Checkpoint") && other.gameObject != prevTarget)
         {
             if (other.gameObject == currentTarget)
             {
                 CheckpointHit(true, other.gameObject.name);
+                prevTarget = currentTarget;
                 CurrentTargetCount++;
 
                 if (other.gameObject.name.Equals("Start"))
@@ -61,22 +64,43 @@ public class CheckpointManager : MonoBehaviour
             else
             {
                 CheckpointHit(false, other.gameObject.name);
-                CurrentTargetCount--;
+                prevTarget = other.gameObject;
+                CurrentTargetCount = GetChildPosition(other.gameObject)+1;
             }
         }
     }
+    
 
     private void UpdateTargetCheckpoint()
     {
 
         if (_currentTargetCount >= _nrOfCheckpoints) _currentTargetCount = 0;
         if (_currentTargetCount == -1) _currentTargetCount = _nrOfCheckpoints-1;
+        
         currentTarget = checkpoints.transform.GetChild(CurrentTargetCount).gameObject;
     }
 
     private void UpdateLabScreen()
     {
         labScreenText.text = (Time.realtimeSinceStartup - _startTime).ToString();
+    }
+
+    private int GetChildPosition(GameObject child)
+    {
+        Transform parrent = child.transform.parent;
+
+        int i = 0;
+        foreach (Transform c in parrent.transform)
+        {
+            if (c.gameObject == child)
+            {
+                return i;
+            }
+
+            i++;
+        }
+
+        throw new Exception("There was en error finding the child indx");
     }
 
 

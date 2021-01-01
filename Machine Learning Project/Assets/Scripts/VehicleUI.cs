@@ -24,10 +24,10 @@ public class VehicleUI : MonoBehaviour
         
         speedGUI.text = $"{Math.Round(speed)} km/t"; 
         
-        rewardGUI.text = vehicle.GetCumulativeReward().ToString();
+        rewardGUI.text = vehicle.GetCumulativeReward().ToString("00.00");
 
         cumulativeReward = vehicle.GetCumulativeReward();
 
-        if (screenReward != null)screenReward.text = vehicle.GetCumulativeReward().ToString();
+        if (screenReward != null)screenReward.text = vehicle.GetCumulativeReward().ToString("00.00");
     }
 }
