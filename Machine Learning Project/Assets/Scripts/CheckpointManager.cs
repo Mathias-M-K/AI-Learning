@@ -13,14 +13,13 @@ public class CheckpointManager : MonoBehaviour
 
     public event Action<bool,string> OnCheckpointHit;  //Return true if the correct checkpoint is hit, false if not
     
-    //Lab variables
-    private bool _timeStarted = false;
-    private float _startTime;
     
     //Checkpoint variables
     private int _nrOfCheckpoints;
     public GameObject currentTarget;
     public GameObject prevTarget;
+
+    public int errorCount;
 
     private int _currentTargetCount = 0;
     public int CurrentTargetCount
@@ -37,35 +36,29 @@ public class CheckpointManager : MonoBehaviour
     {
         _nrOfCheckpoints = checkpoints.transform.childCount;
 
-        currentTarget = checkpoints.transform.GetChild(CurrentTargetCount).gameObject;
+        CurrentTargetCount = 0;
 
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Checkpoint") && other.gameObject != prevTarget)
+        
+        if (other.gameObject.CompareTag("Checkpoint"))
         {
             if (other.gameObject == currentTarget)
             {
-                CheckpointHit(true, other.gameObject.name);
-                prevTarget = currentTarget;
                 CurrentTargetCount++;
-
-                if (other.gameObject.name.Equals("Start"))
-                {
-                    if(_timeStarted) UpdateLabScreen();
-                    _startTime = Time.realtimeSinceStartup;
-                }
-                else
-                {
-                    _timeStarted = true;
-                }
+                CheckpointHit(true, other.gameObject.name);
+            }
+            else if(other.gameObject == prevTarget)
+            {
+                CurrentTargetCount--;
+                CheckpointHit(false, other.gameObject.name);
             }
             else
             {
-                CheckpointHit(false, other.gameObject.name);
-                prevTarget = other.gameObject;
-                CurrentTargetCount = GetChildPosition(other.gameObject)+1;
+                Debug.Log("How the actual fuck");
+                errorCount++;
             }
         }
     }
@@ -77,13 +70,18 @@ public class CheckpointManager : MonoBehaviour
         if (_currentTargetCount >= _nrOfCheckpoints) _currentTargetCount = 0;
         if (_currentTargetCount == -1) _currentTargetCount = _nrOfCheckpoints-1;
         
-        currentTarget = checkpoints.transform.GetChild(CurrentTargetCount).gameObject;
-    }
+        currentTarget = checkpoints.transform.GetChild(_currentTargetCount).gameObject;
 
-    private void UpdateLabScreen()
-    {
-        labScreenText.text = (Time.realtimeSinceStartup - _startTime).ToString();
+        int prevTargetIndex = GetChildPosition(currentTarget)-2;
+
+        if (prevTargetIndex < 0)
+        {
+            prevTargetIndex = prevTargetIndex + _nrOfCheckpoints;
+        }
+
+        prevTarget = checkpoints.transform.GetChild(prevTargetIndex).gameObject;
     }
+    
 
     private int GetChildPosition(GameObject child)
     {
@@ -100,7 +98,15 @@ public class CheckpointManager : MonoBehaviour
             i++;
         }
 
-        throw new Exception("There was en error finding the child indx");
+        throw new Exception("There was en error finding the child index");
+    }
+
+    public void Reset()
+    {
+        errorCount = 0;
+        prevTarget = null;
+        currentTarget = null;
+        CurrentTargetCount = 0;
     }
 
 

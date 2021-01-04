@@ -1,0 +1,196 @@
+CarAI_0.1
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:1,incorrectCheckpoint:-2,wallHit:-1,continuousPenaltyEnabled:TruecontinuousPenalty:-0.001
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCast
+
+	Notes:
+______________________________________________________________________________________________________________________
+
+CarAI_0.2
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:3,incorrectCheckpoint:-2,wallHit:-1,continuousPenaltyEnabled:True,continuousPenalty:-0.001
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCast
+
+	Notes: Adjusted the reward for checkpoints
+______________________________________________________________________________________________________________________
+
+
+CarAI_0.3
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:10,incorrectCheckpoint:-2,wallHit:-2,continuousPenaltyEnabled:True,continuousPenalty:-0.001leftTrack:-2
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCast
+
+	Notes: Added a penalty for driving off the map (yeah i know)
+______________________________________________________________________________________________________________________
+
+CarAI_0.3_1
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:10,incorrectCheckpoint:-2,wallHit:-2,continuousPenaltyEnabled:True,continuousPenalty:-0.001leftTrack:-2
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCast
+
+	Notes: Used the default yaml file
+______________________________________________________________________________________________________________________
+
+
+CarAI_0.4
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:10,incorrectCheckpoint:-2,wallHit:-2,continuousPenaltyEnabled:True,continuousPenalty:-0.001leftTrack:-2
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCast
+		Checkpoint-Raycast
+
+	Notes: Uses updated MyCar.yaml file and i made the car able to see checkpoints
+______________________________________________________________________________________________________________________
+
+
+CarAI_0.5
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:10,incorrectCheckpoint:-2,wallHit:-2,continuousPenaltyEnabled:True,continuousPenalty:-0.001leftTrack:-2
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCast
+		Checkpoint-Raycast
+
+	Notes: Fixed the checkpoint script, it keept saying that cars went the wrong way. Also discovered that the AI was basically blind
+______________________________________________________________________________________________________________________
+
+CarAI_0.6
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:10,incorrectCheckpoint:-2,wallHit:-2,continuousPenaltyEnabled:True,continuousPenalty:-0.001leftTrack:-2
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCast
+		Checkpoint-Raycast
+
+	Notes: Fixed the checkpoint script again :( 
+______________________________________________________________________________________________________________________
+
+
+CarAI_0.7
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:10,incorrectCheckpoint:-2,wallHit:-2,continuousPenaltyEnabled:True,continuousPenalty:-0.001leftTrack:-2
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCast
+		Checkpoint-Raycast
+
+	Notes: 
+		Once again the checkpoint script is fucking up. I suspect that the cars are going to fast to register as a hit.
+		I have made the checkpoints bigger, and also commented out the code that restricts turning when speed = 0
+______________________________________________________________________________________________________________________
+
+CarAI_0.8
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:10,incorrectCheckpoint:-2,wallHit:-2,continuousPenaltyEnabled:True,continuousPenalty:-0.001leftTrack:-2
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCastClose
+		Walls-RayCastFar
+		Checkpoint-Raycast
+
+	Notes: 
+		Added a second perceptionSensor that does not detect checkpoints, but can see walls far away
+		reduced speed to 60 from 100
+______________________________________________________________________________________________________________________
+
+CarAI_0.9_1
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:10,incorrectCheckpoint:-2,wallHit:-2,continuousPenaltyEnabled:True,continuousPenalty:-0.001leftTrack:-2
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCastClose
+		Walls-RayCastFar
+		Checkpoint-Raycast
+
+	Notes: 
+		Set time-scale to 1, since every time it's set to 10, the car have problems detecting colliders
+______________________________________________________________________________________________________________________

@@ -169,6 +169,7 @@
           <e p="CameraMovement.cs" t="Include" />
           <e p="CameraSwitcher.cs" t="Include" />
           <e p="CheckpointManager.cs" t="Include" />
+          <e p="RewardController.cs" t="Include" />
           <e p="VehicleController.cs" t="Include" />
           <e p="VehicleUI.cs" t="Include" />
           <e p="WheelMovement.cs" t="Include" />
