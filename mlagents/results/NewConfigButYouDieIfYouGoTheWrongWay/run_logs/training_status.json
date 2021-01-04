@@ -1,0 +1,48 @@
+{
+    "CarAI": {
+        "checkpoints": [
+            {
+                "steps": 8499609,
+                "file_path": "results\\NewConfigButYouDieIfYouGoTheWrongWay\\CarAI\\CarAI-8499609.onnx",
+                "reward": 61.12,
+                "creation_time": 1609437721.620647
+            },
+            {
+                "steps": 8999115,
+                "file_path": "results\\NewConfigButYouDieIfYouGoTheWrongWay\\CarAI\\CarAI-8999115.onnx",
+                "reward": 38.77777777777778,
+                "creation_time": 1609438910.0026007
+            },
+            {
+                "steps": 9499541,
+                "file_path": "results\\NewConfigButYouDieIfYouGoTheWrongWay\\CarAI\\CarAI-9499541.onnx",
+                "reward": 22.727272727272727,
+                "creation_time": 1609440096.6160479
+            },
+            {
+                "steps": 9999261,
+                "file_path": "results\\NewConfigButYouDieIfYouGoTheWrongWay\\CarAI\\CarAI-9999261.onnx",
+                "reward": 50.333333333333336,
+                "creation_time": 1609441285.0628934
+            },
+            {
+                "steps": 10000121,
+                "file_path": "results\\NewConfigButYouDieIfYouGoTheWrongWay\\CarAI\\CarAI-10000121.onnx",
+                "reward": 57.421052631578945,
+                "creation_time": 1609441285.1982238
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 10000121,
+            "file_path": "results\\NewConfigButYouDieIfYouGoTheWrongWay\\CarAI.onnx",
+            "reward": 57.421052631578945,
+            "creation_time": 1609441285.1982238
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.23.0",
+        "torch_version": "1.7.0+cu110",
+        "tensorflow_version": -1
+    }
+}

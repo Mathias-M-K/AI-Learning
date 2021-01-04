@@ -1,28 +1,33 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using TMPro;
+using Unity.MLAgents;
 using UnityEngine;
-using Random = System.Random;
+
 
 public class CheckpointManager : MonoBehaviour
 {
-    public GameObject checkpoints;  //The empty gameobject containing all the checkpoints
-    public TextMeshProUGUI labScreenText;
+    public GameObject checkpoints;  //The empty game-object containing all the checkpoints
 
     public event Action<bool,string> OnCheckpointHit;  //Return true if the correct checkpoint is hit, false if not
+    public event Action<int,float> OnLapCompleted; 
     
-    
+    //Lap Variables
+    public float lapStartTime;
+    public int lapsCompleted = -1;
+
     //Checkpoint variables
     private int _nrOfCheckpoints;
     public GameObject currentTarget;
     public GameObject prevTarget;
 
-    public int errorCount;
+    public int checkpointsReached;
 
-    private int _currentTargetCount = 0;
-    public int CurrentTargetCount
+    private int _currentTargetCount;
+    
+    
+    //Other
+    private VehicleUI _vui;
+
+    private int CurrentTargetCount
     {
         get => _currentTargetCount;
         set
@@ -31,13 +36,18 @@ public class CheckpointManager : MonoBehaviour
             UpdateTargetCheckpoint();
         }
     }
+
+    
+    
     // Start is called before the first frame update
     void Start()
     {
+
         _nrOfCheckpoints = checkpoints.transform.childCount;
 
         CurrentTargetCount = 0;
 
+        _vui = GetComponent<VehicleUI>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -47,7 +57,24 @@ public class CheckpointManager : MonoBehaviour
         {
             if (other.gameObject == currentTarget)
             {
+                //Log when the car crosses the finish line
+                if (currentTarget.gameObject.name == "Start")
+                {
+                    lapsCompleted++;
+                    
+                    //Using the VehicleUI script to update the lap time
+                    _vui.SetLastLapTime(Time.time - lapStartTime);
+
+                    //add laptime to stats
+                    if(lapStartTime != 0) LapCompleted(lapsCompleted,Time.time-lapStartTime);
+                    
+                    
+                    lapStartTime = Time.time;
+                    
+                }
+                
                 CurrentTargetCount++;
+                checkpointsReached++;
                 CheckpointHit(true, other.gameObject.name);
             }
             else if(other.gameObject == prevTarget)
@@ -58,7 +85,6 @@ public class CheckpointManager : MonoBehaviour
             else
             {
                 Debug.Log("How the actual fuck");
-                errorCount++;
             }
         }
     }
@@ -103,10 +129,17 @@ public class CheckpointManager : MonoBehaviour
 
     public void Reset()
     {
-        errorCount = 0;
+        //Checkpoint stats
+        checkpointsReached = 0;
+        
+        //Checkpoint targets
         prevTarget = null;
         currentTarget = null;
         CurrentTargetCount = 0;
+        
+        //Lap
+        lapStartTime = 0;
+        lapsCompleted = -1;
     }
 
 
@@ -114,5 +147,10 @@ public class CheckpointManager : MonoBehaviour
     protected virtual void CheckpointHit(bool obj, string s)
     {
         OnCheckpointHit?.Invoke(obj,s);
+    }
+
+    protected virtual void LapCompleted(int numberOfCompletedLaps, float lapTime)
+    {
+        OnLapCompleted?.Invoke(numberOfCompletedLaps,lapTime);
     }
 }

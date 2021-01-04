@@ -1,0 +1,48 @@
+{
+    "CarAI": {
+        "checkpoints": [
+            {
+                "steps": 1499767,
+                "file_path": "results\\FirstCarRunWithImprovements\\CarAI\\CarAI-1499767.onnx",
+                "reward": 19.066666666666666,
+                "creation_time": 1609339935.579104
+            },
+            {
+                "steps": 1999896,
+                "file_path": "results\\FirstCarRunWithImprovements\\CarAI\\CarAI-1999896.onnx",
+                "reward": -23.0,
+                "creation_time": 1609340682.5435128
+            },
+            {
+                "steps": 2499422,
+                "file_path": "results\\FirstCarRunWithImprovements\\CarAI\\CarAI-2499422.onnx",
+                "reward": -14.875,
+                "creation_time": 1609341417.4892685
+            },
+            {
+                "steps": 2999024,
+                "file_path": "results\\FirstCarRunWithImprovements\\CarAI\\CarAI-2999024.onnx",
+                "reward": -13.866666666666667,
+                "creation_time": 1609342156.8077853
+            },
+            {
+                "steps": 3150135,
+                "file_path": "results\\FirstCarRunWithImprovements\\CarAI\\CarAI-3150135.onnx",
+                "reward": null,
+                "creation_time": 1609342422.5558949
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3150135,
+            "file_path": "results\\FirstCarRunWithImprovements\\CarAI.onnx",
+            "reward": null,
+            "creation_time": 1609342422.5558949
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.23.0",
+        "torch_version": "1.7.0+cu110",
+        "tensorflow_version": -1
+    }
+}

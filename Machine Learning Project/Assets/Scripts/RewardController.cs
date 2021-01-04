@@ -17,11 +17,13 @@ public class RewardController : MonoBehaviour
             $"wallHit:{wallHit}," +
             $"continuousPenaltyEnabled:{continuousPenaltyEnabled}," +
             $"continuousPenalty:{continuousPenalty}" +
-            $"leftTrack:{leftTrack}";
+            $"leftTrack:{leftTrack}" +
+            $"EpisodeCompleted{episodeCompleted}";
     }
 
     [Header("Rewards")] 
     public float correctCheckpoint;
+    public float episodeCompleted;
     
     [Header("Penalties")]
     public float incorrectCheckpoint;

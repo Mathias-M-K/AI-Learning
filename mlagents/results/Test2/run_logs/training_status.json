@@ -1,0 +1,24 @@
+{
+    "CarAI": {
+        "checkpoints": [
+            {
+                "steps": 79448,
+                "file_path": "results\\Test2\\CarAI\\CarAI-79448.onnx",
+                "reward": 55.100971838243964,
+                "creation_time": 1609798345.454523
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 79448,
+            "file_path": "results\\Test2\\CarAI.onnx",
+            "reward": 55.100971838243964,
+            "creation_time": 1609798345.454523
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.23.0",
+        "torch_version": "1.7.0+cu110",
+        "tensorflow_version": -1
+    }
+}

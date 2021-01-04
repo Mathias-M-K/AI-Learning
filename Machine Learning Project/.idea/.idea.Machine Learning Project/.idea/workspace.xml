@@ -2,20 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6173b77-f2d1-4953-b6d9-9d1959609f93" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI 2.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI 2.onnx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI 5.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI 5.onnx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI-3150135.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI-3150135.onnx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI.onnx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Track.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Track.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RewardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RewardController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +50,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraSwitcher.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WheelMovement.cs" />
       <option value="$PROJECT_DIR$/../../ml-agents/com.unity.ml-agents/Runtime/Actuators/IActionReceiver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/VehicleUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RewardController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/VehicleUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" />
     </changedPaths>
@@ -122,7 +122,8 @@
       <workItem from="1609412168008" duration="7939000" />
       <workItem from="1609508589337" duration="2936000" />
       <workItem from="1609599822959" duration="18551000" />
-      <workItem from="1609710204685" duration="4663000" />
+      <workItem from="1609710204685" duration="13669000" />
+      <workItem from="1609788669927" duration="9590000" />
     </task>
     <servers />
   </component>

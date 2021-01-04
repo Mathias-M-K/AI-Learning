@@ -1,0 +1,36 @@
+{
+    "CarAI": {
+        "checkpoints": [
+            {
+                "steps": 499780,
+                "file_path": "results\\CarAI_0.5\\CarAI\\CarAI-499780.onnx",
+                "reward": 39.16512656730154,
+                "creation_time": 1609632488.2156742
+            },
+            {
+                "steps": 610312,
+                "file_path": "results\\CarAI_0.5\\CarAI\\CarAI-610312.onnx",
+                "reward": 42.34677368118649,
+                "creation_time": 1609632694.059757
+            },
+            {
+                "steps": 615567,
+                "file_path": "results\\CarAI_0.5\\CarAI\\CarAI-615567.onnx",
+                "reward": 39.845446503162385,
+                "creation_time": 1609632725.8026848
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 615567,
+            "file_path": "results\\CarAI_0.5\\CarAI.onnx",
+            "reward": 39.845446503162385,
+            "creation_time": 1609632725.8026848
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.23.0",
+        "torch_version": "1.7.0+cu110",
+        "tensorflow_version": -1
+    }
+}

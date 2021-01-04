@@ -14,10 +14,20 @@ public class VehicleUI : MonoBehaviour
 
     [Header("Screen GUI")] 
     public TextMeshProUGUI screenReward;
+    public TextMeshProUGUI lastLapTime;
+    public TextMeshProUGUI currentLapTime;
 
     [Header("Things")] 
     public float cumulativeReward;
-    // Update is called once per frame
+
+    private CheckpointManager _cpm;
+
+
+    private void Start()
+    {
+        _cpm = GetComponent<CheckpointManager>();
+    }
+
     void Update()
     {
         float speed = vehicle.speed;
@@ -28,6 +38,16 @@ public class VehicleUI : MonoBehaviour
 
         cumulativeReward = vehicle.GetCumulativeReward();
 
-        if (screenReward != null)screenReward.text = vehicle.GetCumulativeReward().ToString("00.00");
+        
+        
+        
+        //Updateing
+        screenReward.text = vehicle.GetCumulativeReward().ToString("00.00");
+        currentLapTime.text = (Time.time - _cpm.lapStartTime).ToString("00.00");
+    }
+
+    public void SetLastLapTime(float f)
+    {
+        lastLapTime.text = f.ToString("00.00");
     }
 }
