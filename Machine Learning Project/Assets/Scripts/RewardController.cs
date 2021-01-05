@@ -16,8 +16,8 @@ public class RewardController : MonoBehaviour
             $"incorrectCheckpoint:{incorrectCheckpoint}," +
             $"wallHit:{wallHit}," +
             $"continuousPenaltyEnabled:{continuousPenaltyEnabled}," +
-            $"continuousPenalty:{continuousPenalty}" +
-            $"leftTrack:{leftTrack}" +
+            $"continuousPenalty:{continuousPenalty}," +
+            $"leftTrack:{leftTrack}," +
             $"EpisodeCompleted{episodeCompleted}";
     }
 

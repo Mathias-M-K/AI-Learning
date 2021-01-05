@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class VehicleUI : MonoBehaviour
+public class UIController : MonoBehaviour
 {
     public VehicleController vehicle; 
     

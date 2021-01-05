@@ -25,7 +25,7 @@ public class CheckpointManager : MonoBehaviour
     
     
     //Other
-    private VehicleUI _vui;
+    private UIController _vui;
 
     private int CurrentTargetCount
     {
@@ -47,7 +47,7 @@ public class CheckpointManager : MonoBehaviour
 
         CurrentTargetCount = 0;
 
-        _vui = GetComponent<VehicleUI>();
+        _vui = GetComponent<UIController>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -57,8 +57,13 @@ public class CheckpointManager : MonoBehaviour
         {
             if (other.gameObject == currentTarget)
             {
+                
+                CurrentTargetCount++;
+                checkpointsReached++;
+                CheckpointHit(true, other.gameObject.name);
+                
                 //Log when the car crosses the finish line
-                if (currentTarget.gameObject.name == "Start")
+                if (other.gameObject.name == "Start")
                 {
                     lapsCompleted++;
                     
@@ -70,12 +75,7 @@ public class CheckpointManager : MonoBehaviour
                     
                     
                     lapStartTime = Time.time;
-                    
                 }
-                
-                CurrentTargetCount++;
-                checkpointsReached++;
-                CheckpointHit(true, other.gameObject.name);
             }
             else if(other.gameObject == prevTarget)
             {
