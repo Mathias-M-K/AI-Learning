@@ -253,10 +253,28 @@ public class VehicleController : Agent
 
     private void AgentReset()
     {
+        //TODO Log scaled time alive
+        //TODO Log time/checkpoints
+        
         transform.position = originPos;
 
-        _statsRecorder.Add("MyStats/Checkpoints Reached", _checkpointManager.checkpointsReached);
-
+        _statsRecorder.Add(
+            "MyStats/Checkpoints Reached",
+            _checkpointManager.checkpointsReached);
+        
+        _statsRecorder.Add(
+            "MyStats/Time pr each Checkpoint",
+            (Time.time-_checkpointManager.startTime)/_checkpointManager.checkpointsReached);
+        
+        _statsRecorder.Add(
+            "MyStats/Time Alive",
+            Time.time - _checkpointManager.lapStartTime);
+        
+        _statsRecorder.Add(
+            "MyStats/Laps completed",
+            _checkpointManager.lapsCompleted);
+        
+        
         _checkpointManager.Reset();
         drive = 0;
         turn = 0;

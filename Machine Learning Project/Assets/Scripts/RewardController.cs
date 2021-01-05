@@ -18,7 +18,7 @@ public class RewardController : MonoBehaviour
             $"continuousPenaltyEnabled:{continuousPenaltyEnabled}," +
             $"continuousPenalty:{continuousPenalty}," +
             $"leftTrack:{leftTrack}," +
-            $"EpisodeCompleted{episodeCompleted}";
+            $"EpisodeCompleted:{episodeCompleted}";
     }
 
     [Header("Rewards")] 

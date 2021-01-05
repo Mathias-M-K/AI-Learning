@@ -12,6 +12,7 @@ public class CheckpointManager : MonoBehaviour
     
     //Lap Variables
     public float lapStartTime;
+    public float startTime;
     public int lapsCompleted = -1;
 
     //Checkpoint variables
@@ -42,7 +43,6 @@ public class CheckpointManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         _nrOfCheckpoints = checkpoints.transform.childCount;
 
         CurrentTargetCount = 0;
@@ -72,6 +72,7 @@ public class CheckpointManager : MonoBehaviour
 
                     //add laptime to stats
                     if(lapStartTime != 0) LapCompleted(lapsCompleted,Time.time-lapStartTime);
+                    if (startTime == 0) startTime = Time.time;
                     
                     
                     lapStartTime = Time.time;
