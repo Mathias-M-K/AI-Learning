@@ -6,8 +6,9 @@ using UnityEngine;
 public class VehicleController : Agent
 {
     [Header("Controller")] 
-    public float controllerX, controllerY;
-    
+    public float rawX;
+    public float rawY;
+
     [Header("Car Status")] 
     public float turnValue; //Current rotation value to turn
     public float speed; //Current speed
@@ -23,44 +24,51 @@ public class VehicleController : Agent
     public float turnRateResetSpeed; //Determines how long it will take from turning to driving straight forward
     private float _maxTurnRateActual; //Current maxTurnRate
 
-    [Header("Other")] public float turnRate;
+    [Header("Other")] 
+    public float turnRate;
     private CheckpointManager _checkpointManager;
     private StatsRecorder _statsRecorder;
 
 
     [Header("AI Controls")] 
     public float turn; //1 = right, 0 = no turn, -1 = left
-    public float drive; //1 = forward, 0 = no drive, -1 = reverse
+    public float drive; //1 = forward, 0 = no drive
+    public float targetDrive;
+    public float targetTurn;
     public Vector3 originPos;
-    
+
     public override void Initialize()
     {
         _statsRecorder = Academy.Instance.StatsRecorder;
-        
+
         _checkpointManager = GetComponent<CheckpointManager>();
         _checkpointManager.OnCheckpointHit += OnCheckpointHit;
         _checkpointManager.OnLapCompleted += OnLapCompleted;
-        
+
         originPos = transform.position;
     }
 
-    
 
     public override void OnActionReceived(ActionBuffers actions)
     {
         //Continous Penalty to make it go faster!
         AddReward(RewardController.MyRewardController.continuousPenalty);
 
+
+        rawX = actions.ContinuousActions[0];
+        rawY = actions.ContinuousActions[1];
+
         //turn
-        turn = actions.ContinuousActions[0];
+        turn = Mathf.Clamp(actions.ContinuousActions[0], -1, 1);
 
         //drive
-        drive = actions.ContinuousActions[1];
+        drive = Mathf.Clamp(actions.ContinuousActions[1], -1, 1);
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         var actions = actionsOut.ContinuousActions;
+
 
         //ContinuousActions[0] = Turn
         actions[0] = Input.GetAxis("Horizontal");
@@ -74,9 +82,9 @@ public class VehicleController : Agent
         transform.position = originPos;
     }
 
-    private void OnCheckpointHit(bool i, string s)
+    private void OnCheckpointHit(bool correctCheckpointHit, string s)
     {
-        if (i)
+        if (correctCheckpointHit)
         {
             AddReward(RewardController.MyRewardController.correctCheckpoint);
         }
@@ -84,41 +92,42 @@ public class VehicleController : Agent
         {
             AddReward(RewardController.MyRewardController.incorrectCheckpoint);
             Debug.Log("Reset : Wrong Way");
-            Reset();
+            AgentReset();
         }
     }
-    
+
     private void OnLapCompleted(int completedLaps, float lapTime)
     {
-        Debug.Log($"OnLapCompleted:{completedLaps},{lapTime}");
-        
+        Debug.Log($"OnLapCompleted: Lap:{completedLaps}, Time:{lapTime}");
+
         if (completedLaps >= 3)
         {
             AddReward(RewardController.MyRewardController.episodeCompleted);
-            Reset();
+            AgentReset();
         }
-        
-        _statsRecorder.Add("MyStats/Lap time",lapTime);
+
+        _statsRecorder.Add("MyStats/Lap time", lapTime);
     }
 
     // Update is called once per frame
     void Update()
     {
-        controllerX = Input.GetAxis("Horizontal");
-        controllerY = Input.GetAxis("Fire1");
-
+        //TODO - Fix the adaptive turn-rate system
+        
         //Determining turn-rate based on the current speed of the vehicle
-        _maxTurnRateActual = map(Math.Abs(speed), 0, maxSpeed, maxTurnRate, 0);
-        if (_maxTurnRateActual < 2) _maxTurnRateActual = 2;
+        //_maxTurnRateActual = map(Math.Abs(speed), 0, maxSpeed, maxTurnRate, 0);
+        //if (_maxTurnRateActual < 2) _maxTurnRateActual = 2;
+        _maxTurnRateActual = maxTurnRate;
 
 
         if (transform.position.y < -10)
         {
             Debug.Log("Reset : Left Track");
             AddReward(RewardController.MyRewardController.leftTrack);
-            Reset();
+            AgentReset();
         }
         /*
+         //Turning and driving forward
         //Turning
         if (turn == 1 && Math.Abs(speed) > 0.1)
         {
@@ -147,10 +156,9 @@ public class VehicleController : Agent
             if (turnValue < 0) turnValue += turnRate * turnRateResetSpeed * Time.deltaTime;
             if (turnValue > 0) turnValue -= turnRate * turnRateResetSpeed * Time.deltaTime;
             if (Math.Abs(turnValue) < 0.5) turnValue = 0;
-        }*/
+        }
 
         //Breaking and acceleration
-        /*
         if (drive == 1)
         {
             speed += accelerationSpeed * Time.deltaTime;
@@ -178,7 +186,7 @@ public class VehicleController : Agent
                 if (turnValue > 0) turnValue -= turnRate * turnRateResetSpeed * Time.deltaTime;
             }
         }
-        else if (targetTurnValue > turnValue && Math.Abs(speed) > 0.1)
+        else if (targetTurnValue > turnValue)
         {
             if (turnValue < 0)
             {
@@ -189,7 +197,7 @@ public class VehicleController : Agent
                 turnValue += turnRate * Time.deltaTime;
             }
         }
-        else if (targetTurnValue < turnValue && Math.Abs(speed) > 0.1)
+        else if (targetTurnValue < turnValue)
         {
             if (turnValue > 0)
             {
@@ -229,6 +237,10 @@ public class VehicleController : Agent
         }
 
 
+        //
+        targetDrive = targetSpeed;
+        targetTurn = targetTurnValue;
+
         //Enforcing restraints
         if (speed > maxSpeed) speed = maxSpeed;
         if (speed < -maxSpeed) speed = -maxSpeed;
@@ -239,15 +251,30 @@ public class VehicleController : Agent
         //Moving vehicle
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
         transform.Rotate(Vector3.up, turnRate * turnValue * Time.deltaTime);
-
-        //TODO - Have vehicle come to full stop if hitting a wall head on
     }
 
-    public void Reset()
+    private void AgentReset()
     {
         transform.position = originPos;
+
+        _statsRecorder.Add(
+            "MyStats/Checkpoints Reached",
+            _checkpointManager.checkpointsReached);
+
+        //Checking that it's more that 0, since someone decided that dividing by zero is impossible
+        int checkpointsReached = _checkpointManager.checkpointsReached == 0 ? 1 : _checkpointManager.checkpointsReached;
+        _statsRecorder.Add(
+            "MyStats/Time pr each Checkpoint",
+            (Time.time-_checkpointManager.startTime)/checkpointsReached);
         
-        _statsRecorder.Add("MyStats/Checkpoints Reached", _checkpointManager.checkpointsReached);
+        _statsRecorder.Add(
+            "MyStats/Time Alive",
+            Time.time - _checkpointManager.startTime);
+        
+        _statsRecorder.Add(
+            "MyStats/Laps completed",
+            _checkpointManager.lapsCompleted);
+        
         
         _checkpointManager.Reset();
         drive = 0;
@@ -272,7 +299,7 @@ public class VehicleController : Agent
         {
             Debug.Log("Reset : Wall hit");
             AddReward(RewardController.MyRewardController.wallHit);
-            Reset();
+            AgentReset();
 
 
             /*

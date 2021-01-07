@@ -12,6 +12,7 @@ public class CheckpointManager : MonoBehaviour
     
     //Lap Variables
     public float lapStartTime;
+    public float startTime;
     public int lapsCompleted = -1;
 
     //Checkpoint variables
@@ -25,7 +26,7 @@ public class CheckpointManager : MonoBehaviour
     
     
     //Other
-    private VehicleUI _vui;
+    private UIController _vui;
 
     private int CurrentTargetCount
     {
@@ -42,12 +43,11 @@ public class CheckpointManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         _nrOfCheckpoints = checkpoints.transform.childCount;
 
         CurrentTargetCount = 0;
 
-        _vui = GetComponent<VehicleUI>();
+        _vui = GetComponent<UIController>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -57,25 +57,29 @@ public class CheckpointManager : MonoBehaviour
         {
             if (other.gameObject == currentTarget)
             {
+                
+                CurrentTargetCount++;
+                checkpointsReached++;
+                CheckpointHit(true, other.gameObject.name);
+                
                 //Log when the car crosses the finish line
-                if (currentTarget.gameObject.name == "Start")
+                if (other.gameObject.name == "Start")
                 {
                     lapsCompleted++;
                     
                     //Using the VehicleUI script to update the lap time
                     _vui.SetLastLapTime(Time.time - lapStartTime);
 
-                    //add laptime to stats
-                    if(lapStartTime != 0) LapCompleted(lapsCompleted,Time.time-lapStartTime);
-                    
-                    
+                    float tempLapStartTime = lapStartTime;
                     lapStartTime = Time.time;
                     
+                    //add laptime to stats
+                    if (tempLapStartTime != 0)
+                    {
+                        LapCompleted(lapsCompleted,Time.time-tempLapStartTime);
+                    }
+                    if (startTime == 0) startTime = Time.time;
                 }
-                
-                CurrentTargetCount++;
-                checkpointsReached++;
-                CheckpointHit(true, other.gameObject.name);
             }
             else if(other.gameObject == prevTarget)
             {
@@ -139,6 +143,7 @@ public class CheckpointManager : MonoBehaviour
         
         //Lap
         lapStartTime = 0;
+        startTime = 0;
         lapsCompleted = -1;
     }
 

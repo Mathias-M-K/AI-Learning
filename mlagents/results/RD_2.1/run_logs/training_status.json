@@ -1,0 +1,48 @@
+{
+    "CarAI": {
+        "checkpoints": [
+            {
+                "steps": 4499526,
+                "file_path": "results\\RD_2.1\\CarAI\\CarAI-4499526.onnx",
+                "reward": 9.716168185075125,
+                "creation_time": 1609941703.0714262
+            },
+            {
+                "steps": 4999141,
+                "file_path": "results\\RD_2.1\\CarAI\\CarAI-4999141.onnx",
+                "reward": 6.636530392310199,
+                "creation_time": 1609942970.5902054
+            },
+            {
+                "steps": 5499575,
+                "file_path": "results\\RD_2.1\\CarAI\\CarAI-5499575.onnx",
+                "reward": 7.52083436648051,
+                "creation_time": 1609944235.987213
+            },
+            {
+                "steps": 5999987,
+                "file_path": "results\\RD_2.1\\CarAI\\CarAI-5999987.onnx",
+                "reward": 12.414429996694837,
+                "creation_time": 1609945591.6770048
+            },
+            {
+                "steps": 6083471,
+                "file_path": "results\\RD_2.1\\CarAI\\CarAI-6083471.onnx",
+                "reward": 7.997667858997981,
+                "creation_time": 1609945829.0003738
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 6083471,
+            "file_path": "results\\RD_2.1\\CarAI.onnx",
+            "reward": 7.997667858997981,
+            "creation_time": 1609945829.0003738
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.23.0",
+        "torch_version": "1.7.0+cu110",
+        "tensorflow_version": -1
+    }
+}

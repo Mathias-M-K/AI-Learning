@@ -170,8 +170,8 @@
           <e p="CameraSwitcher.cs" t="Include" />
           <e p="CheckpointManager.cs" t="Include" />
           <e p="RewardController.cs" t="Include" />
+          <e p="UIController.cs" t="Include" />
           <e p="VehicleController.cs" t="Include" />
-          <e p="VehicleUI.cs" t="Include" />
           <e p="WheelMovement.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
