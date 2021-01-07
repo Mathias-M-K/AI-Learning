@@ -113,9 +113,11 @@ public class VehicleController : Agent
     void Update()
     {
         //TODO - Fix the adaptive turn-rate system
+        
         //Determining turn-rate based on the current speed of the vehicle
-        _maxTurnRateActual = map(Math.Abs(speed), 0, maxSpeed, maxTurnRate, 0);
-        if (_maxTurnRateActual < 2) _maxTurnRateActual = 2;
+        //_maxTurnRateActual = map(Math.Abs(speed), 0, maxSpeed, maxTurnRate, 0);
+        //if (_maxTurnRateActual < 2) _maxTurnRateActual = 2;
+        _maxTurnRateActual = maxTurnRate;
 
 
         if (transform.position.y < -10)
@@ -184,7 +186,7 @@ public class VehicleController : Agent
                 if (turnValue > 0) turnValue -= turnRate * turnRateResetSpeed * Time.deltaTime;
             }
         }
-        else if (targetTurnValue > turnValue && Math.Abs(speed) > 0.1)
+        else if (targetTurnValue > turnValue)
         {
             if (turnValue < 0)
             {
@@ -195,7 +197,7 @@ public class VehicleController : Agent
                 turnValue += turnRate * Time.deltaTime;
             }
         }
-        else if (targetTurnValue < turnValue && Math.Abs(speed) > 0.1)
+        else if (targetTurnValue < turnValue)
         {
             if (turnValue > 0)
             {
@@ -253,22 +255,21 @@ public class VehicleController : Agent
 
     private void AgentReset()
     {
-        //TODO Log scaled time alive
-        //TODO Log time/checkpoints
-        
         transform.position = originPos;
 
         _statsRecorder.Add(
             "MyStats/Checkpoints Reached",
             _checkpointManager.checkpointsReached);
-        
+
+        //Checking that it's more that 0, since someone decided that dividing by zero is impossible
+        int checkpointsReached = _checkpointManager.checkpointsReached == 0 ? 1 : _checkpointManager.checkpointsReached;
         _statsRecorder.Add(
             "MyStats/Time pr each Checkpoint",
-            (Time.time-_checkpointManager.startTime)/_checkpointManager.checkpointsReached);
+            (Time.time-_checkpointManager.startTime)/checkpointsReached);
         
         _statsRecorder.Add(
             "MyStats/Time Alive",
-            Time.time - _checkpointManager.lapStartTime);
+            Time.time - _checkpointManager.startTime);
         
         _statsRecorder.Add(
             "MyStats/Laps completed",

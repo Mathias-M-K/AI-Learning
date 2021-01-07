@@ -194,3 +194,111 @@ CarAI_0.9_1
 	Notes: 
 		Set time-scale to 1, since every time it's set to 10, the car have problems detecting colliders
 ______________________________________________________________________________________________________________________
+
+RD_1
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:0.5,
+		incorrectCheckpoint:-0.7,
+		wallHit:-0.5,
+		continuousPenaltyEnabled:True,
+		continuousPenalty:-0.001,
+		leftTrack:-0.5,
+		EpisodeCompleted1
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCastClose
+		Walls-RayCastFar
+		Checkpoint-Raycast
+
+	Notes: 
+		Speed is at 60 and car cant turn while holding still. The controls have been remodyfied to support continuous actions (-1,1)
+______________________________________________________________________________________________________________________
+
+RD_2
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:0.5,
+		incorrectCheckpoint:-0.7,
+		wallHit:-0.5,
+		continuousPenaltyEnabled:True,
+		continuousPenalty:-0.001,
+		leftTrack:-0.5,
+		EpisodeCompleted1
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCastClose
+		Walls-RayCastFar
+		Checkpoint-Raycast
+
+	Notes: 
+		made it so that the car can turn while speed=0. Also reduced the chechpoints, there are now 13 in total, start checkpoint included
+______________________________________________________________________________________________________________________
+
+RD_2.1
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:0.5,
+		incorrectCheckpoint:-0.7,
+		wallHit:-0.5,
+		continuousPenaltyEnabled:True,
+		continuousPenalty:-0.001,
+		leftTrack:-0.5,
+		EpisodeCompleted1
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCastClose
+		Walls-RayCastFar
+		Checkpoint-Raycast
+
+	Notes: 
+		Same as RD_2, but time-scale=10 instead of =5
+______________________________________________________________________________________________________________________
+
+RD_2.2
+	Controls
+		Driving : Forward, Nothing
+		Turning : Left, Right, Nothing
+
+	Rewards
+		correctCheckpoint:0.5,
+		incorrectCheckpoint:-0.7,
+		wallHit:-0.5,
+		continuousPenaltyEnabled:True,
+		continuousPenalty:-0.001,
+		leftTrack:-0.5,
+		EpisodeCompleted1
+
+	Rules
+		Die on wallhit? 		Yes
+		Die on incorrect cp 	Yes
+
+	Observations
+		Walls-RayCastClose
+		Walls-RayCastFar
+		Checkpoint-Raycast
+
+	Notes: 
+		Same as RD_2.1, but time-scale=1 instead of =10
+______________________________________________________________________________________________________________________

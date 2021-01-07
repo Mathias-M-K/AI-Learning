@@ -70,12 +70,15 @@ public class CheckpointManager : MonoBehaviour
                     //Using the VehicleUI script to update the lap time
                     _vui.SetLastLapTime(Time.time - lapStartTime);
 
-                    //add laptime to stats
-                    if(lapStartTime != 0) LapCompleted(lapsCompleted,Time.time-lapStartTime);
-                    if (startTime == 0) startTime = Time.time;
-                    
-                    
+                    float tempLapStartTime = lapStartTime;
                     lapStartTime = Time.time;
+                    
+                    //add laptime to stats
+                    if (tempLapStartTime != 0)
+                    {
+                        LapCompleted(lapsCompleted,Time.time-tempLapStartTime);
+                    }
+                    if (startTime == 0) startTime = Time.time;
                 }
             }
             else if(other.gameObject == prevTarget)
@@ -140,6 +143,7 @@ public class CheckpointManager : MonoBehaviour
         
         //Lap
         lapStartTime = 0;
+        startTime = 0;
         lapsCompleted = -1;
     }
 
