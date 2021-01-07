@@ -3,20 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f6173b77-f2d1-4953-b6d9-9d1959609f93" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Track.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Track.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RewardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RewardController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Track.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,28 +22,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RewardController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/VehicleUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/3DBall/Scripts/Ball3DAgent.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/MyResources/Scripts/Movement.cs" />
-      <option value="$PROJECT_DIR$/Assets/SphereFollower.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/VechicleUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/ML-Agents/Examples/Match3/Scripts/Match3Agent.cs" />
-      <option value="$PROJECT_DIR$/Assets/ML-Agents/Examples/Match3/Scripts/Match3Board.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/DrivingAgent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Google Sheets to Unity/Animal Example/Scripts/Scriptable Objects/Animal.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GoogleSheetController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CameraSwitcher.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WheelMovement.cs" />
-      <option value="$PROJECT_DIR$/../../ml-agents/com.unity.ml-agents/Runtime/Actuators/IActionReceiver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RewardController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/VehicleUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" />
-    </changedPaths>
   </component>
   <component name="ProjectId" id="1lposfdLHoPSTnQtRnWKiPwRAqK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -84,7 +51,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <list />
+        <set />
       </option>
       <method v="2" />
     </configuration>
@@ -93,7 +60,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <list />
+        <set />
       </option>
       <method v="2" />
     </configuration>
