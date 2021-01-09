@@ -24,7 +24,7 @@ behaviors:
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
-    max_steps: 10000000
+    max_steps: 15000000
     time_horizon: 1000
     summary_freq: 12000
     threaded: true
@@ -41,7 +41,7 @@ engine_settings:
   width: 84
   height: 84
   quality_level: 5
-  time_scale: 5.0
+  time_scale: 20
   target_frame_rate: -1
   capture_frame_rate: 60
   no_graphics: false

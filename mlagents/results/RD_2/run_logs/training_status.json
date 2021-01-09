@@ -2,12 +2,6 @@
     "CarAI": {
         "checkpoints": [
             {
-                "steps": 9023265,
-                "file_path": "results\\RD_2\\CarAI\\CarAI-9023265.onnx",
-                "reward": 18.15470199584961,
-                "creation_time": 1609897663.4316552
-            },
-            {
                 "steps": 9025848,
                 "file_path": "results\\RD_2\\CarAI\\CarAI-9025848.onnx",
                 "reward": 0.1766250804066658,
@@ -30,13 +24,19 @@
                 "file_path": "results\\RD_2\\CarAI\\CarAI-10000698.onnx",
                 "reward": 18.18333562215169,
                 "creation_time": 1609927673.686858
+            },
+            {
+                "steps": 10009506,
+                "file_path": "results\\RD_2\\CarAI\\CarAI-10009506.onnx",
+                "reward": 0.1567091622135856,
+                "creation_time": 1610153525.498124
             }
         ],
         "final_checkpoint": {
-            "steps": 10000698,
+            "steps": 10009506,
             "file_path": "results\\RD_2\\CarAI.onnx",
-            "reward": 18.18333562215169,
-            "creation_time": 1609927673.686858
+            "reward": 0.1567091622135856,
+            "creation_time": 1610153525.498124
         }
     },
     "metadata": {
