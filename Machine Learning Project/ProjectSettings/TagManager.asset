@@ -12,6 +12,7 @@ TagManager:
   - agent
   - ground
   - Checkpoint
+  - Ball
   layers:
   - Default
   - TransparentFX
