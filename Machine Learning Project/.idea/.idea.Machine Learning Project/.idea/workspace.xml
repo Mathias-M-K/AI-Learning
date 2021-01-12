@@ -4,48 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6173b77-f2d1-4953-b6d9-9d1959609f93" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/indexLayout.xml" afterDir="false" />
+    <list default="true" id="f6173b77-f2d1-4953-b6d9-9d1959609f93" name="Default Changelist" comment="Finished working on Self-driving AI.&#10;Begun work on Sorting AI. The AI will be tasked with sorting balls with different colors. The task should be super easy, but my goal is to make scene a little more pleasing for the eye">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI RD_2_Training_1.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI RD_2_Training_1.onnx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI_0.9.1.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI_0.9.1.onnx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI_RD_2.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/CarAI_RD_2.onnx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Purple.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Purple.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype 1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype 1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Track.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Track.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Track.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSwitcher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSwitcher.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RewardController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RewardController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WheelMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WheelMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Self-Driving AI/Scenes/Track.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Self-Driving AI/Scenes/Track.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Materials/BallMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Materials/BallMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scenes/Sorting AI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scenes/Sorting AI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/ArmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/ArmController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,8 +36,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" />
       <option value="$PROJECT_DIR$/Assets/Experiments/Self-Driving AI/Scripts/VehicleController.cs" />
       <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/ArmController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallController.cs" />
       <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallController.cs" />
       <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" />
     </changedPaths>
   </component>
@@ -144,8 +112,16 @@
       <workItem from="1610192977370" duration="2918000" />
       <workItem from="1610365878340" duration="1000000" />
       <workItem from="1610379127964" duration="1751000" />
-      <workItem from="1610452968899" duration="6581000" />
+      <workItem from="1610452968899" duration="9530000" />
     </task>
+    <task id="LOCAL-00001" summary="Finished working on Self-driving AI.&#10;Begun work on Sorting AI. The AI will be tasked with sorting balls with different colors. The task should be super easy, but my goal is to make scene a little more pleasing for the eye">
+      <created>1610488939033</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610488939033</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,5 +143,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Finished working on Self-driving AI.&#10;Begun work on Sorting AI. The AI will be tasked with sorting balls with different colors. The task should be super easy, but my goal is to make scene a little more pleasing for the eye" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished working on Self-driving AI.&#10;Begun work on Sorting AI. The AI will be tasked with sorting balls with different colors. The task should be super easy, but my goal is to make scene a little more pleasing for the eye" />
   </component>
 </project>

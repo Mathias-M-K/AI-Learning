@@ -5,8 +5,10 @@ namespace Experiments.Sorting_AI.Scripts
 {
     public class ArmController : MonoBehaviour
     {
-        public float rotationSpeed;
-
+        [Header("Arm Settings")]
+        public float rotationTime;
+        
+        //Current
         private Tilt _currentTilt = Tilt.Right;
 
 
@@ -34,10 +36,10 @@ namespace Experiments.Sorting_AI.Scripts
             switch (tilt)
             {
                 case Tilt.Right:
-                    LeanTween.rotateLocal(this.gameObject, new Vector3(30, 0, 45), 0.5f);
+                    LeanTween.rotateLocal(this.gameObject, new Vector3(30, 0, 45), rotationTime);
                     break;
                 case Tilt.Left:
-                    LeanTween.rotateLocal(this.gameObject, new Vector3(30, 0, -45), 0.5f);
+                    LeanTween.rotateLocal(this.gameObject, new Vector3(30, 0, -45), rotationTime);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(tilt), tilt, "Should be either Tilt.Right or Tilt.Left");

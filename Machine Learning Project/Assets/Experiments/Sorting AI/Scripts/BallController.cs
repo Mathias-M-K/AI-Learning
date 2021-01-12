@@ -1,20 +1,25 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Experiments.Sorting_AI.Scripts
 {
     public class BallController : MonoBehaviour
     {
-        private BallColor _color;
+        private BallColor _color = BallColor.Blue;
 
         //Ball behavior
         public float gravity;
-        private Rigidbody _rb;
         
-        void Start()
+        private float _userChoosenGravityValue;
+        private Rigidbody _rb;
+
+
+        private void Awake()
         {
+            _userChoosenGravityValue = gravity;
             _rb = GetComponent<Rigidbody>();
         }
-        
+
         void FixedUpdate()
         {
             _rb.AddForce(Vector3.down*gravity);
@@ -23,15 +28,18 @@ namespace Experiments.Sorting_AI.Scripts
         public void SetColor(BallColor color)
         {
             _color = color;
-            
-            //TODO Actually change the color of the ball, later.
         }
 
         public BallColor GetColor()
         {
             return _color;
         }
+
+        public void EnableGravity(bool gravityEnabled)
+        {
+            gravity = gravityEnabled ? _userChoosenGravityValue : 0;
+        }
     }
     
-    public enum BallColor{Red,Blue}
+    public enum BallColor{All,Red,Blue}
 }

@@ -1647,7 +1647,7 @@ GameObject:
   - component: {fileID: 188435865}
   m_Layer: 0
   m_Name: BlueSensor
-  m_TagString: Untagged
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1664,7 +1664,7 @@ Transform:
   m_LocalScale: {x: 4.0882177, y: 0.27755, z: 1.0104}
   m_Children: []
   m_Father: {fileID: 1024592799}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
 --- !u!65 &188435863
 BoxCollider:
@@ -1699,7 +1699,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70501aa2b1ebe954ba17608b92c40d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  approvedBalls: 1
+  sensorName: Sensor1
+  approvedBalls: 02000000
 --- !u!1 &220945481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,7 +1761,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 30977f96ee729164aa6b69e6f1575fb1, type: 2}
+  - {fileID: 2100000, guid: 27904809028b17b44930179b4e5664ef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2763,7 +2764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487552865}
   m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: 4.5, y: 32, z: -25}
+  m_LocalPosition: {x: 9.16, y: 32, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3362,6 +3363,7 @@ Transform:
   m_LocalPosition: {x: 5, y: -2.4340405, z: -4.400708}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1678327194}
   - {fileID: 188435862}
   - {fileID: 2100038697}
   m_Father: {fileID: 444509387}
@@ -5041,6 +5043,74 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1678327193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1678327194}
+  - component: {fileID: 1678327197}
+  - component: {fileID: 1678327196}
+  - component: {fileID: 1678327195}
+  m_Layer: 0
+  m_Name: EntrySensor
+  m_TagString: Sensor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1678327194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678327193}
+  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
+  m_LocalPosition: {x: -0.32, y: 11.19, z: 8.25}
+  m_LocalScale: {x: 8.709987, y: 0.27755, z: 1.0104}
+  m_Children: []
+  m_Father: {fileID: 1024592799}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
+--- !u!114 &1678327195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678327193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70501aa2b1ebe954ba17608b92c40d17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensorName: EntrySensor
+  approvedBalls: 00000000
+--- !u!65 &1678327196
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678327193}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1678327197
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678327193}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1748677516
 GameObject:
   m_ObjectHideFlags: 0
@@ -5055,7 +5125,7 @@ GameObject:
   - component: {fileID: 1748677518}
   - component: {fileID: 1748677521}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5147,7 +5217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be9a6411f47d2140a4ff427b1d92e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 50
+  rotationTime: 0.2
 --- !u!1 &1773298768
 GameObject:
   m_ObjectHideFlags: 0
@@ -5189,7 +5259,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh95962
+  m_Name: pb_Mesh16320
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5376,7 +5446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballObj: {fileID: 2080905331}
-  sensorManager: {fileID: 0}
+  materialRed: {fileID: 2100000, guid: c0a39d390b2e12f40ab1de544f78a3ab, type: 2}
+  materialBlue: {fileID: 2100000, guid: 398ad23a19493654c8b90b8b70cb60bd, type: 2}
 --- !u!4 &1991781502
 Transform:
   m_ObjectHideFlags: 0
@@ -5459,7 +5530,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c0a39d390b2e12f40ab1de544f78a3ab, type: 2}
+  - {fileID: 2100000, guid: 398ad23a19493654c8b90b8b70cb60bd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5529,7 +5600,7 @@ GameObject:
   - component: {fileID: 2100038700}
   m_Layer: 0
   m_Name: RedSensor
-  m_TagString: Untagged
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5546,7 +5617,7 @@ Transform:
   m_LocalScale: {x: 4.0882177, y: 0.27755, z: 1.0104}
   m_Children: []
   m_Father: {fileID: 1024592799}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
 --- !u!65 &2100038698
 BoxCollider:
@@ -5581,4 +5652,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70501aa2b1ebe954ba17608b92c40d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  approvedBalls: 0
+  sensorName: Sensor2
+  approvedBalls: 01000000

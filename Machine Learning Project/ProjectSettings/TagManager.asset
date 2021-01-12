@@ -13,6 +13,7 @@ TagManager:
   - ground
   - Checkpoint
   - Ball
+  - Sensor
   layers:
   - Default
   - TransparentFX
