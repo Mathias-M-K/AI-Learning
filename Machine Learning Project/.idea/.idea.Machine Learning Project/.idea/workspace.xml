@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6173b77-f2d1-4953-b6d9-9d1959609f93" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Track.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mlagents/config/MyCar.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../mlagents/config/MyCar.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI.onnx" beforeDir="false" afterPath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI.onnx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/CarAI-10000607.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/CarAI-8499462.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/CarAI-8999869.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/CarAI-9499614.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/CarAI-9999792.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/checkpoint.pt" beforeDir="false" afterPath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/checkpoint.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/configuration.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../mlagents/results/RD_2.2/configuration.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/run_logs/timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/../mlagents/results/RD_2.2/run_logs/timers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/run_logs/training_status.json" beforeDir="false" afterPath="$PROJECT_DIR$/../mlagents/results/RD_2.2/run_logs/training_status.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +29,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WheelMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RewardController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/VehicleUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/3DBall/Scripts/Ball3DAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RewardController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1lposfdLHoPSTnQtRnWKiPwRAqK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -91,6 +102,8 @@
       <workItem from="1609599822959" duration="18551000" />
       <workItem from="1609710204685" duration="13669000" />
       <workItem from="1609788669927" duration="9590000" />
+      <workItem from="1610195700130" duration="32000" />
+      <workItem from="1610225857286" duration="32000" />
     </task>
     <servers />
   </component>
@@ -113,5 +126,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="383" y="211" width="672" height="678" key="search.everywhere.popup" timestamp="1610195723026">
+      <screen x="0" y="0" width="1440" height="929" />
+    </state>
+    <state x="383" y="211" width="672" height="678" key="search.everywhere.popup/0.0.1440.929@0.0.1440.929" timestamp="1610195723026" />
   </component>
 </project>

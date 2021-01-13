@@ -24,7 +24,7 @@ behaviors:
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
-    max_steps: 50000000
+    max_steps: 20000000
     time_horizon: 1000
     summary_freq: 12000
     threaded: true
@@ -47,10 +47,10 @@ engine_settings:
   no_graphics: false
 environment_parameters: null
 checkpoint_settings:
-  run_id: RD_2.2
+  run_id: RD_2.4
   initialize_from: null
   load_model: false
-  resume: true
+  resume: false
   force: false
   train_model: false
   inference: false

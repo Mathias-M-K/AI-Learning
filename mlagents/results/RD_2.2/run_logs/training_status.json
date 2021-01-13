@@ -2,41 +2,41 @@
     "CarAI": {
         "checkpoints": [
             {
-                "steps": 8499462,
-                "file_path": "results\\RD_2.2\\CarAI\\CarAI-8499462.onnx",
-                "reward": 18.411876440048218,
-                "creation_time": 1610150766.986948
+                "steps": 10009592,
+                "file_path": "results\\RD_2.2\\CarAI\\CarAI-10009592.onnx",
+                "reward": 18.417911009355024,
+                "creation_time": 1610195827.8703203
             },
             {
-                "steps": 8999869,
-                "file_path": "results\\RD_2.2\\CarAI\\CarAI-8999869.onnx",
-                "reward": 18.417002360026043,
-                "creation_time": 1610155859.656981
+                "steps": 10499252,
+                "file_path": "results\\RD_2.2\\CarAI\\CarAI-10499252.onnx",
+                "reward": 17.573456677523527,
+                "creation_time": 1610200927.5874023
             },
             {
-                "steps": 9499614,
-                "file_path": "results\\RD_2.2\\CarAI\\CarAI-9499614.onnx",
-                "reward": 18.40935911451067,
-                "creation_time": 1610161223.468251
+                "steps": 10999859,
+                "file_path": "results\\RD_2.2\\CarAI\\CarAI-10999859.onnx",
+                "reward": 18.410336176554363,
+                "creation_time": 1610206273.653457
             },
             {
-                "steps": 9999792,
-                "file_path": "results\\RD_2.2\\CarAI\\CarAI-9999792.onnx",
-                "reward": 18.405402183532715,
-                "creation_time": 1610166584.4363928
+                "steps": 11499422,
+                "file_path": "results\\RD_2.2\\CarAI\\CarAI-11499422.onnx",
+                "reward": 18.40685953412737,
+                "creation_time": 1610212241.113574
             },
             {
-                "steps": 10000607,
-                "file_path": "results\\RD_2.2\\CarAI\\CarAI-10000607.onnx",
-                "reward": 18.407184080644086,
-                "creation_time": 1610166584.6196342
+                "steps": 11721173,
+                "file_path": "results\\RD_2.2\\CarAI\\CarAI-11721173.onnx",
+                "reward": 17.705835342407227,
+                "creation_time": 1610214878.5895677
             }
         ],
         "final_checkpoint": {
-            "steps": 10000607,
+            "steps": 11721173,
             "file_path": "results\\RD_2.2\\CarAI.onnx",
-            "reward": 18.407184080644086,
-            "creation_time": 1610166584.6196342
+            "reward": 17.705835342407227,
+            "creation_time": 1610214878.5895677
         }
     },
     "metadata": {
