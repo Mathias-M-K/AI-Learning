@@ -1,5 +1,5 @@
 behaviors:
-  3DBall:
+  Sorting_AI:
     trainer_type: ppo
     hyperparameters:
       batch_size: 64

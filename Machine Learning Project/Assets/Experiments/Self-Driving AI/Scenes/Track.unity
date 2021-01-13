@@ -4826,7 +4826,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172287450}
-  m_LocalRotation: {x: -0.0000000020456918, y: 0.99392724, z: -0.1100396, w: -0.000000018477612}
+  m_LocalRotation: {x: -0.000000002152907, y: 0.99392724, z: -0.11003961, w: -0.000000019446027}
   m_LocalPosition: {x: -1.09, y: 4.9370003, z: 18.263}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -29709,7 +29709,7 @@ MonoBehaviour:
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 5022602860645237092, guid: c81f770d36aa76c429819b25947fe6dc, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 1
+  m_BehaviorType: 0
   m_BehaviorName: CarAI
   TeamId: 0
   m_UseChildSensors: 1
@@ -63951,7 +63951,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601677051}
-  m_LocalRotation: {x: 0.11777539, y: -0.0000000176125, z: 0.0000000020888569, w: 0.99304026}
+  m_LocalRotation: {x: 0.11777541, y: 0.00000001761249, z: -0.0000000020888562, w: 0.99304026}
   m_LocalPosition: {x: -1.09, y: 4.9370003, z: -1.5570002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -81528,7 +81528,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069983386}
-  m_LocalRotation: {x: 0.11777539, y: -0.0000000176125, z: 0.0000000020888569, w: 0.99304026}
+  m_LocalRotation: {x: 0.11777541, y: 0.00000001761249, z: -0.0000000020888562, w: 0.99304026}
   m_LocalPosition: {x: -1.09, y: 4.9370003, z: -1.5570002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -83598,7 +83598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178130, guid: 70bf34f6c25c948458f254e87188b00b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 178130, guid: 70bf34f6c25c948458f254e87188b00b, type: 3}
       propertyPath: m_TagString

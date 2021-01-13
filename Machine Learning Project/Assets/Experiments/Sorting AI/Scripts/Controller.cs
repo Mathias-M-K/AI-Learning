@@ -202,12 +202,12 @@ namespace Experiments.Sorting_AI.Scripts
             {
                 Destroy(ball);
             }
-
-            _ballsSortedCorrectCount = 0;
-            _ballsSortedIncorrectCount = 0;
             
             _statsRecorder.Add("MyStats/Balls sorted correct",_ballsSortedCorrectCount);
             _statsRecorder.Add("MyStats/Balls sorted incorrect",_ballsSortedIncorrectCount);
+            
+            _ballsSortedCorrectCount = 0;
+            _ballsSortedIncorrectCount = 0;
 
             EndEpisode();
         }
