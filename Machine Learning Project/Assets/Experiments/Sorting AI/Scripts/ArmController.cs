@@ -11,27 +11,9 @@ namespace Experiments.Sorting_AI.Scripts
         //Current
         private Tilt _currentTilt = Tilt.Right;
 
-
-
-        // Update is called once per frame
-        void Update()
-        {
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                MoveArm(Tilt.Left);
-            }
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                MoveArm(Tilt.Right);
-            }
-            
-        }
-
-        private void MoveArm(Tilt tilt)
+        public void MoveArm(Tilt tilt)
         {
             if (tilt == _currentTilt) return;
-            
-            
             
             switch (tilt)
             {
@@ -46,6 +28,11 @@ namespace Experiments.Sorting_AI.Scripts
             }
 
             _currentTilt = tilt;
+        }
+
+        public Tilt GetCurrentArmPosition()
+        {
+            return _currentTilt;
         }
     }
     public enum Tilt {Right,Left}

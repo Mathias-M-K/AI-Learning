@@ -10,18 +10,18 @@ namespace Experiments.Sorting_AI.Scripts
         public BallColor[] approvedBalls;
         
         
-        public event Action<BallColor,bool,string> SensorTrigger;
+        public event Action<GameObject,bool,string> SensorTrigger;
     
-        protected virtual void OnSensorTrigger(BallColor color, bool approved)
+        protected virtual void OnSensorTrigger(GameObject ball, bool approved)
         {
-            SensorTrigger?.Invoke(color,approved,sensorName);
+            SensorTrigger?.Invoke(ball,approved,sensorName);
         }
 
         private void OnTriggerEnter(Collider other)
         {
             BallColor color = other.gameObject.GetComponent<BallController>().GetColor();
 
-            OnSensorTrigger(color,CheckIfApproved(color));
+            OnSensorTrigger(other.gameObject,CheckIfApproved(color));
         }
 
         private bool CheckIfApproved(BallColor color)
