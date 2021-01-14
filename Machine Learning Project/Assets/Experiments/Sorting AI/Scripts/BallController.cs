@@ -5,18 +5,18 @@ namespace Experiments.Sorting_AI.Scripts
 {
     public class BallController : MonoBehaviour
     {
-        private BallColor _color = BallColor.Blue;
+        private string _color;
 
         //Ball behavior
         public float gravity;
         
-        private float _userChoosenGravityValue;
+        private float _userChosenGravityValue;
         private Rigidbody _rb;
 
 
         private void Awake()
         {
-            _userChoosenGravityValue = gravity;
+            _userChosenGravityValue = gravity;
             _rb = GetComponent<Rigidbody>();
         }
 
@@ -25,21 +25,19 @@ namespace Experiments.Sorting_AI.Scripts
             _rb.AddForce(Vector3.down*gravity);
         }
 
-        public void SetColor(BallColor color)
+        public void SetColor(string color)
         {
             _color = color;
         }
 
-        public BallColor GetColor()
+        public string GetColor()
         {
             return _color;
         }
 
         public void EnableGravity(bool gravityEnabled)
         {
-            gravity = gravityEnabled ? _userChoosenGravityValue : 0;
+            gravity = gravityEnabled ? _userChosenGravityValue : 0;
         }
     }
-    
-    public enum BallColor{All,Red,Blue}
 }

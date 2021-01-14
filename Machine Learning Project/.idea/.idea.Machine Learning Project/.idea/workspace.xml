@@ -2,22 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6173b77-f2d1-4953-b6d9-9d1959609f93" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Changenoted" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Track.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mlagents/config/MyCar.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../mlagents/config/MyCar.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI.onnx" beforeDir="false" afterPath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI.onnx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/CarAI-10000607.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/CarAI-8499462.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/CarAI-8999869.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/CarAI-9499614.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/CarAI-9999792.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/checkpoint.pt" beforeDir="false" afterPath="$PROJECT_DIR$/../mlagents/results/RD_2.2/CarAI/checkpoint.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/configuration.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../mlagents/results/RD_2.2/configuration.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/run_logs/timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/../mlagents/results/RD_2.2/run_logs/timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mlagents/results/RD_2.2/run_logs/training_status.json" beforeDir="false" afterPath="$PROJECT_DIR$/../mlagents/results/RD_2.2/run_logs/training_status.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AI/SortingAI/Sorting_AI.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AI/SortingAI/Sorting_AI.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Materials/BallMaterial_blue.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Materials/BallMaterial_blue.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Materials/BallMaterial_red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Materials/BallMaterial_red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scenes/Sorting AI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scenes/Sorting AI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +27,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WheelMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/3DBall/Scripts/Ball3DAgent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RewardController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1lposfdLHoPSTnQtRnWKiPwRAqK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -62,7 +66,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -71,7 +75,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -104,6 +108,8 @@
       <workItem from="1609788669927" duration="9590000" />
       <workItem from="1610195700130" duration="32000" />
       <workItem from="1610225857286" duration="32000" />
+      <workItem from="1610547443230" duration="8219000" />
+      <workItem from="1610582566347" duration="6078000" />
     </task>
     <servers />
   </component>

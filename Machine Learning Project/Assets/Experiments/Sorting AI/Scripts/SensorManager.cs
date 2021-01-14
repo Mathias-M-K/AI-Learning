@@ -7,7 +7,7 @@ namespace Experiments.Sorting_AI.Scripts
     {
         [Header("Sensor Settings")] 
         public string sensorName;
-        public BallColor[] approvedBalls;
+        public string[] approvedBalls;
         
         
         public event Action<GameObject,bool,string> SensorTrigger;
@@ -19,16 +19,22 @@ namespace Experiments.Sorting_AI.Scripts
 
         private void OnTriggerEnter(Collider other)
         {
-            BallColor color = other.gameObject.GetComponent<BallController>().GetColor();
+            string color = other.gameObject.GetComponent<BallController>().GetColor();
 
             OnSensorTrigger(other.gameObject,CheckIfApproved(color));
         }
 
-        private bool CheckIfApproved(BallColor color)
+        private bool CheckIfApproved(string color)
         {
-            if (color == BallColor.All) return true;
-            
-            foreach (BallColor approvedBall in approvedBalls)
+            switch (approvedBalls[0])
+            {
+                case "All":
+                    return true;
+                case "None":
+                    return false;
+            }
+
+            foreach (string approvedBall in approvedBalls)
             {
                 if (color == approvedBall) return true;
             }

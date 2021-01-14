@@ -11,40 +11,35 @@ namespace Experiments.Sorting_AI.Scripts
 {
     public class Controller : Agent
     {
-        private Vector3 _spawnPosition;
+
         [Header("Spectator Values")] 
         public float cumulativeReward;
 
+        [Header("Settings")] 
+        public int maxBallsBeforeResetting;
+
         [Header("Sorting Arm")] 
         public ArmController armController;
-
-        [Header("Ball")] 
-        public GameObject ballStartPos;
-        public GameObject ballPrefab;
-
-        [Header("Materials")] 
-        public Material materialRed;
-        public Material materialBlue;
 
         [Header("Rewards")] 
         public float wrongSortPenalty;
         public float correctSortReward;
         public float endGameReward;
 
-        [Header("Sensors")] [Tooltip("Sensor Parent Obj")]
-        public GameObject sensors; 
-
-        //In game balls
-        private BallController _ballToBeReleased;
-        private BallController _fallingBall;
-
+        [Header("Components")] 
+        [Tooltip("Sensor Parent Obj")] 
+        public GameObject sensors;
+        public BallSpawner ballSpawner;
+        
         //Counting balls
         private int _ballsSortedCorrectCount;
         private int _ballsSortedIncorrectCount;
-        private List<GameObject> _balls = new List<GameObject>();
-        
-        //Statsrecorder
+
+        //Stats Recorder
         private StatsRecorder _statsRecorder;
+        
+        //Observations
+        public string lastBall = "";
 
 
         /*
@@ -53,31 +48,27 @@ namespace Experiments.Sorting_AI.Scripts
 
         public override void Initialize()
         {
-            _spawnPosition = ballStartPos.transform.position;
-            _fallingBall = ballStartPos.GetComponent<BallController>();
-            _ballToBeReleased = _fallingBall;
             _statsRecorder = Academy.Instance.StatsRecorder;
 
             //Registering sensors and subscribing to them
             RegisterSensors();
+            
+            //Set Ballspawner to contunius shoot balls
+            ballSpawner.SetMode(SpawnModes.Automatic);
         }
 
         public override void CollectObservations(VectorSensor sensor)
         {
-            int fallingBallTranslationInt = TranslateColor(_fallingBall.GetColor());
-            int spawnedBallTranslationInt = TranslateColor(_ballToBeReleased.GetColor());
-            int armPositionTranslationInt = TranslateArmPosition(armController.GetCurrentArmPosition());
+            //Adding the last ball through the entry-sensor as an observation
+            if(lastBall != "") sensor.AddObservation(ballSpawner.GetColorIndex(lastBall));
             
-            sensor.AddObservation(fallingBallTranslationInt);
-            sensor.AddObservation(spawnedBallTranslationInt);
-            sensor.AddObservation(armPositionTranslationInt);
+            //Adding the position of the arm as an observation
+            sensor.AddObservation(TranslateArmPosition(armController.GetCurrentArmPosition()));
         }
 
         public override void OnActionReceived(ActionBuffers actions)
         {
             // 0 = left, 1 = right
-            Debug.Log(actions.DiscreteActions[0]);
-
             switch (actions.DiscreteActions[0])
             {
                 case 0:
@@ -96,57 +87,13 @@ namespace Experiments.Sorting_AI.Scripts
             if (Input.GetKey(KeyCode.LeftArrow)) actions[0] = 0;
             if (Input.GetKey(KeyCode.RightArrow)) actions[0] = 1;
         }
-
-        public override void OnEpisodeBegin()
-        {
-        }
-
-
-        private void SpawnNewBall()
-        {
-            int randomNr = Random.Range(0, 2);
-            BallColor bColor;
-            Material bMaterial;
-
-            switch (randomNr)
-            {
-                case 0:
-                    bColor = BallColor.Blue;
-                    bMaterial = materialBlue;
-                    break;
-                case 1:
-                    bColor = BallColor.Red;
-                    bMaterial = materialRed;
-                    break;
-                default:
-                    bColor = BallColor.Red;
-                    bMaterial = materialRed;
-                    break;
-            }
-
-            GameObject go = Instantiate(ballPrefab, _spawnPosition, Quaternion.Euler(0, 0, 0));
-            go.GetComponent<Renderer>().material.color = bMaterial.color;
-
-            BallController newBallController = go.GetComponent<BallController>();
-            newBallController.SetColor(bColor);
-            newBallController.EnableGravity(false);
-
-            _ballToBeReleased = newBallController;
-        }
-
-        private void ReleaseNewBall()
-        {
-            if (_ballToBeReleased == null) return;
-
-
-            _fallingBall = _ballToBeReleased;
-            _ballToBeReleased.EnableGravity(true);
-        }
+        
+        
 
         private void OnSensorTrigger(GameObject ball, bool approved, string sensorName)
         {
             //Request decision from academy
-            //RequestDecision();
+            RequestDecision();
             
             //Updating the cumulative reward spectator field
             cumulativeReward = GetCumulativeReward();
@@ -154,17 +101,15 @@ namespace Experiments.Sorting_AI.Scripts
             //Checking if the entry sensor. If yes, then new balls need to be spawned
             if (sensorName == "EntrySensor")
             {
-                SpawnNewBall();
-
-                _balls.Add(ball);
+                lastBall = ball.GetComponent<BallController>().GetColor();
+                
                 return;
             }
 
             //Print sensor obs
             Debug.Log($"SensorObs:{ball},{approved},{sensorName}");
 
-            //Release the next ball
-            ReleaseNewBall();
+            
 
             //Check whether the ball was sorted correct or incorrect
             if (approved)
@@ -179,7 +124,7 @@ namespace Experiments.Sorting_AI.Scripts
             }
 
             //Checking whether the episode should be reset
-            if (_ballsSortedCorrectCount + _ballsSortedIncorrectCount >= 50)
+            if (_ballsSortedCorrectCount + _ballsSortedIncorrectCount >= maxBallsBeforeResetting)
             {
                 AddReward(endGameReward);
                 AgentReset();
@@ -196,12 +141,7 @@ namespace Experiments.Sorting_AI.Scripts
 
         private void AgentReset()
         {
-            Debug.Log("Instance Reset");
-
-            foreach (GameObject ball in _balls)
-            {
-                Destroy(ball);
-            }
+            ballSpawner.ClearBalls();
             
             _statsRecorder.Add("MyStats/Balls sorted correct",_ballsSortedCorrectCount);
             _statsRecorder.Add("MyStats/Balls sorted incorrect",_ballsSortedIncorrectCount);
@@ -215,30 +155,8 @@ namespace Experiments.Sorting_AI.Scripts
         /*
          * Translation Methods
          */
+        
 
-        /*
-             * Translation
-             * Color red = 1
-             * Color blue = 2
-             * Arm position left = 1;
-             * Arm position right = 2;
-             */
-
-        private int TranslateColor(BallColor color)
-        {
-            //Translating ball color of the ball currently falling
-            switch (_fallingBall.GetColor())
-            {
-                case BallColor.All:
-                    throw new ArgumentException("Ball can't have 'all' set as it's color", nameof(color));
-                case BallColor.Red:
-                    return 1;
-                case BallColor.Blue:
-                    return 2;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-        }
 
         private int TranslateArmPosition(Tilt armPosition)
         {

@@ -1,0 +1,22 @@
+Change Notes - Sorting AI
+
+SortingAI_0.1
+	Ball spawns when previus ball passes the entrysensor. The ball is then released when the previus ball is sorted.
+
+	Training was done in time-scale=5
+
+______________________________________________________________________________________________________________________
+
+SortingAI_0.2
+	Decision was only requested when ball hit a sensor
+
+	Training was done in time-scale=5
+
+______________________________________________________________________________________________________________________
+
+SortingAI_0.3
+	Extensive changes to how balls are spawned and how the AI observe. The AI is no longer able to observe the last two balls spawned, but are instead observing the color of balls going through the entrysensor. External decision requester have been added for this test
+
+	Training was done in time-scale=5
+
+______________________________________________________________________________________________________________________
