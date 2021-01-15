@@ -20,3 +20,12 @@ SortingAI_0.3
 	Training was done in time-scale=5
 
 ______________________________________________________________________________________________________________________
+
+
+SortingAI_0.4
+	World have been extended to support sorting of four different kinds of balls. Likewise the code have been updated to support these changes. The first test was done with a ball spawning every 0.2 second. It might have been to fast, and another test with a spawning rate of 0.5 or maybe 1 is needed to confirm wheter im shit at programming or it simply is to fast.
+
+	Training was done in time-scale=5
+
+______________________________________________________________________________________________________________________
+

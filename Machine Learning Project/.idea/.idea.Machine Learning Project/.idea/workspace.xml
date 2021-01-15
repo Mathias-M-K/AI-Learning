@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6173b77-f2d1-4953-b6d9-9d1959609f93" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scenes/Sorting AI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scenes/Sorting AI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/ArmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/ArmController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +98,7 @@
       <workItem from="1610225857286" duration="32000" />
       <workItem from="1610547443230" duration="8219000" />
       <workItem from="1610582566347" duration="6078000" />
-      <workItem from="1610668773099" duration="3462000" />
+      <workItem from="1610668773099" duration="4069000" />
     </task>
     <servers />
   </component>
