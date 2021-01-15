@@ -22,6 +22,10 @@ namespace Experiments.Sorting_AI.Scripts
         
         private Vector3 _spawnPosition;
         private readonly List<GameObject> _activeBalls = new List<GameObject>();
+        
+        [Header("Next Spawn")]
+        public string nextColor;
+        public int nextColorInt;
 
         private float _lastBallSpawn;
         
@@ -29,6 +33,10 @@ namespace Experiments.Sorting_AI.Scripts
         {
             _spawnPosition = ballStartPos.transform.position;
             Destroy(ballStartPos);
+            
+            //Generating the first ball spawn
+            nextColorInt = Random.Range(0, colorNames.Length);
+            nextColor = colorNames[nextColorInt];
         }
 
         private void Update()
@@ -51,16 +59,16 @@ namespace Experiments.Sorting_AI.Scripts
 
         public void SpawnNewBall()
         {
-            int randomNr = Random.Range(0, colorNames.Length);
-            string bColor = colorNames[randomNr];
-
             GameObject go = Instantiate(ballPrefab, _spawnPosition, Quaternion.Euler(0, 0, 0));
-            go.GetComponent<Renderer>().material.color = colors[randomNr];
+            go.GetComponent<Renderer>().material.color = colors[nextColorInt];
             
             _activeBalls.Add(go);
 
             BallController newBallController = go.GetComponent<BallController>();
-            newBallController.SetColor(bColor);
+            newBallController.SetColor(nextColor);
+            
+            nextColorInt = Random.Range(0, colorNames.Length);
+            nextColor = colorNames[nextColorInt];
         }
 
         public string[] GetColors()

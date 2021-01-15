@@ -17,6 +17,7 @@ namespace Experiments.Sorting_AI.Scripts
 
         [Header("Settings")] 
         public int maxBallsBeforeResetting;
+        public bool automaticBallSpawns;
 
         [Header("Sorting Arm")] 
         public ArmController middleArmController;
@@ -58,8 +59,8 @@ namespace Experiments.Sorting_AI.Scripts
             //Registering sensors and subscribing to them
             RegisterSensors();
             
-            //Set Ballspawner to contunius shoot balls
-            ballSpawner.SetMode(SpawnModes.Automatic);
+            //Set ball-spawner mode
+            if(automaticBallSpawns) ballSpawner.SetMode(SpawnModes.Automatic);
         }
 
         public override void CollectObservations(VectorSensor sensor)
@@ -134,6 +135,15 @@ namespace Experiments.Sorting_AI.Scripts
                 {
                     Debug.Log("Right fire");
                     entrySensorRightLastObs = ball.GetComponent<BallController>().GetColor();
+                }
+
+                if (approved)
+                {
+                    AddReward(correctSortReward);
+                }
+                else
+                {
+                    AddReward(wrongSortPenalty);
                 }
                 
                 return;

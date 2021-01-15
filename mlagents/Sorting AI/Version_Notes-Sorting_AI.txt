@@ -29,3 +29,10 @@ SortingAI_0.4
 
 ______________________________________________________________________________________________________________________
 
+SortingAI_0.4.1
+	Test was done with a spawnrate of 0.5 and multiple changes to the world to ensure the balls was falling as intended. But still the results were disapointing, so another test is underway!
+
+	Training was done in time-scale=5
+
+______________________________________________________________________________________________________________________
+
