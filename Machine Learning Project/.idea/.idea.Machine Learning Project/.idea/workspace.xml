@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6173b77-f2d1-4953-b6d9-9d1959609f93" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scenes/Sorting AI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scenes/Sorting AI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mlagents/Sorting AI/Version_Notes-Sorting_AI.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mlagents/Sorting AI/Version_Notes-Sorting_AI.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +23,8 @@
       <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallController.cs" />
       <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/ArmController.cs" />
       <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" />
       <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lposfdLHoPSTnQtRnWKiPwRAqK" />
@@ -103,7 +100,7 @@
       <workItem from="1610547443230" duration="8219000" />
       <workItem from="1610582566347" duration="6078000" />
       <workItem from="1610668773099" duration="4069000" />
-      <workItem from="1610752977668" duration="517000" />
+      <workItem from="1610752977668" duration="1178000" />
     </task>
     <servers />
   </component>

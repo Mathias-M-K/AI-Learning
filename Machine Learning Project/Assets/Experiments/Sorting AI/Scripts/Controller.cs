@@ -110,15 +110,15 @@ namespace Experiments.Sorting_AI.Scripts
 
         private void OnSensorTrigger(GameObject ball, bool approved, string sensorName, SensorType sensorType)
         {
-            //Request decision from academy
-            RequestDecision();
-            
             //Updating the cumulative reward spectator field
             cumulativeReward = GetCumulativeReward();
 
             //Checking if the entry sensor. If yes, then new balls need to be spawned
             if (sensorType == SensorType.Observation)
             {
+                //Request decision from academy
+                RequestDecision();
+                
                 if (sensorName.Equals("Mid"))
                 {
                     Debug.Log("Mid fire");
