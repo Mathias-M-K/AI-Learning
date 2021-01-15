@@ -33,7 +33,14 @@ namespace Experiments.Sorting_AI.Scripts
 
         private void Update()
         {
-            if (currentMode == SpawnModes.Manual) return;
+            if (currentMode == SpawnModes.Manual)
+            {
+                if(Input.GetKeyDown(KeyCode.Space))
+                {
+                    SpawnNewBall();
+                }
+                return;
+            }
 
             if (Time.time - _lastBallSpawn >= spawnRate)
             {

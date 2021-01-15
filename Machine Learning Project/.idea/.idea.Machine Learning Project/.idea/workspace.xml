@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6173b77-f2d1-4953-b6d9-9d1959609f93" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Changenoted" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/SortingAI/Sorting_AI.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AI/SortingAI/Sorting_AI.onnx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Materials/BallMaterial_blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Materials/BallMaterial_blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Materials/BallMaterial_red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Materials/BallMaterial_red.mat.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scenes/Sorting AI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scenes/Sorting AI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/ArmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/ArmController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +23,10 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/ArmController.cs" />
       <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" />
     </changedPaths>
   </component>
@@ -110,6 +102,7 @@
       <workItem from="1610225857286" duration="32000" />
       <workItem from="1610547443230" duration="8219000" />
       <workItem from="1610582566347" duration="6078000" />
+      <workItem from="1610668773099" duration="3462000" />
     </task>
     <servers />
   </component>

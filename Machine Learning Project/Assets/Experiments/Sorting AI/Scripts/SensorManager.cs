@@ -8,13 +8,14 @@ namespace Experiments.Sorting_AI.Scripts
         [Header("Sensor Settings")] 
         public string sensorName;
         public string[] approvedBalls;
+        public SensorType sensorType;
         
         
-        public event Action<GameObject,bool,string> SensorTrigger;
+        public event Action<GameObject,bool,string,SensorType> SensorTrigger;
     
         protected virtual void OnSensorTrigger(GameObject ball, bool approved)
         {
-            SensorTrigger?.Invoke(ball,approved,sensorName);
+            SensorTrigger?.Invoke(ball,approved,sensorName,sensorType);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -41,6 +42,11 @@ namespace Experiments.Sorting_AI.Scripts
 
             return false;
         }
+    }
+    public enum SensorType
+    {
+        Observation,
+        Count   
     }
     
     

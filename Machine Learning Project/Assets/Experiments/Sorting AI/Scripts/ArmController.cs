@@ -30,6 +30,25 @@ namespace Experiments.Sorting_AI.Scripts
             _currentTilt = tilt;
         }
 
+        /// <summary>
+        /// 0 will move arm left, 1 will move arm right
+        /// </summary>
+        /// <param name="tilt"></param>
+        public void MoveArm(int tilt)
+        {
+            switch (tilt)
+            {
+                case 0:
+                    MoveArm(Tilt.Left);
+                    break;
+                case 1:
+                    MoveArm(Tilt.Right);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(tilt),"Argument should be either 0 or 1");
+            }
+        }
+
         public Tilt GetCurrentArmPosition()
         {
             return _currentTilt;
