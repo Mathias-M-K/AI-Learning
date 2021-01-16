@@ -38,6 +38,7 @@ namespace Experiments.Sorting_AI.Scripts
         //Counting balls
         private int _ballsSortedCorrectCount;
         private int _ballsSortedIncorrectCount;
+        private List<GameObject> _collectedBalls = new List<GameObject>();
 
         //Stats Recorder
         private StatsRecorder _statsRecorder;
@@ -71,9 +72,9 @@ namespace Experiments.Sorting_AI.Scripts
             if(entrySensorRightLastObs != "") sensor.AddObservation(ballSpawner.GetColorIndex(entrySensorMidLastObs));
             
             //Adding the position of the arm as an observation
-            sensor.AddObservation(TranslateArmPosition(middleArmController.GetCurrentArmPosition()));
+            /*sensor.AddObservation(TranslateArmPosition(middleArmController.GetCurrentArmPosition()));
             sensor.AddObservation(TranslateArmPosition(leftArmController.GetCurrentArmPosition()));
-            sensor.AddObservation(TranslateArmPosition(rightArmController.GetCurrentArmPosition()));
+            sensor.AddObservation(TranslateArmPosition(rightArmController.GetCurrentArmPosition()));*/
         }
 
         public override void OnActionReceived(ActionBuffers actions)
@@ -152,7 +153,7 @@ namespace Experiments.Sorting_AI.Scripts
             //Print sensor obs
             Debug.Log($"SensorObs:{ball},{approved},{sensorName}");
 
-            
+            _collectedBalls.Add(ball);
 
             //Check whether the ball was sorted correct or incorrect
             if (approved)
@@ -184,7 +185,11 @@ namespace Experiments.Sorting_AI.Scripts
 
         private void AgentReset()
         {
-            ballSpawner.ClearBalls();
+            //ballSpawner.ClearBalls();
+            foreach (GameObject ball in _collectedBalls)
+            {
+                Destroy(ball);
+            }
             
             _statsRecorder.Add("MyStats/Balls sorted correct",_ballsSortedCorrectCount);
             _statsRecorder.Add("MyStats/Balls sorted incorrect",_ballsSortedIncorrectCount);
