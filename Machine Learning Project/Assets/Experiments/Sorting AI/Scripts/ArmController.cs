@@ -11,6 +11,11 @@ namespace Experiments.Sorting_AI.Scripts
         //Current
         private Tilt _currentTilt = Tilt.Right;
 
+        /// <summary>
+        /// Moveing sorting arm, using the 
+        /// </summary>
+        /// <param name="tilt"></param>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public void MoveArm(Tilt tilt)
         {
             if (tilt == _currentTilt) return;
