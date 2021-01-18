@@ -16,14 +16,12 @@ namespace Experiments.Sorting_AI.Scripts
         public float cumulativeReward;
 
         [Header("Settings")] 
+        public bool automaticallyClearBalls;
         public int maxBallsBeforeResetting;
-        public bool automaticBallSpawns;
+        
 
         [Header("Sorting Arm")] 
-        public ArmController middleArmController;
-        public ArmController leftArmController;
-        public ArmController rightArmController;
-        
+        public ArmController armController;
 
         [Header("Rewards")] 
         public float wrongSortPenalty;
@@ -32,21 +30,21 @@ namespace Experiments.Sorting_AI.Scripts
 
         [Header("Components")] 
         [Tooltip("Sensor Parent Obj")] 
-        public GameObject sensors;
+        public SensorManager entrySensor;
+        public SensorManager sortingSensor1;
+        public SensorManager sortingSensor2;
         public BallSpawner ballSpawner;
-        
+
         //Counting balls
         private int _ballsSortedCorrectCount;
         private int _ballsSortedIncorrectCount;
-        private List<GameObject> _collectedBalls = new List<GameObject>();
+        private readonly List<GameObject> _collectedBalls = new List<GameObject>();
 
         //Stats Recorder
         private StatsRecorder _statsRecorder;
         
         //Observations
-        public string entrySensorMidLastObs = "";
-        public string entrySensorRightLastObs = "";
-        public string entrySensorLeftLastObs = "";
+        public string entrySensorLastObs = "";
 
 
         /*
@@ -58,23 +56,19 @@ namespace Experiments.Sorting_AI.Scripts
             _statsRecorder = Academy.Instance.StatsRecorder;
 
             //Registering sensors and subscribing to them
-            RegisterSensors();
-            
-            //Set ball-spawner mode
-            if(automaticBallSpawns) ballSpawner.SetMode(SpawnModes.Automatic);
+            entrySensor.SensorTrigger += OnEntrySensorTrigger;
+            sortingSensor1.SensorTrigger += OnObservationSensorTrigger;
+            sortingSensor2.SensorTrigger += OnObservationSensorTrigger;
         }
 
         public override void CollectObservations(VectorSensor sensor)
         {
             //Adding the last ball through the entry-sensor as an observation
-            if(entrySensorMidLastObs != "") sensor.AddObservation(ballSpawner.GetColorIndex(entrySensorMidLastObs));
-            if(entrySensorLeftLastObs != "") sensor.AddObservation(ballSpawner.GetColorIndex(entrySensorMidLastObs));
-            if(entrySensorRightLastObs != "") sensor.AddObservation(ballSpawner.GetColorIndex(entrySensorMidLastObs));
-            
+            if(entrySensorLastObs != "") sensor.AddObservation(ballSpawner.GetColorIndex(entrySensorLastObs));
+
             //Adding the position of the arm as an observation
-            /*sensor.AddObservation(TranslateArmPosition(middleArmController.GetCurrentArmPosition()));
-            sensor.AddObservation(TranslateArmPosition(leftArmController.GetCurrentArmPosition()));
-            sensor.AddObservation(TranslateArmPosition(rightArmController.GetCurrentArmPosition()));*/
+            sensor.AddObservation(TranslateArmPosition(armController.GetCurrentArmPosition()));
+
         }
 
         public override void OnActionReceived(ActionBuffers actions)
@@ -85,9 +79,7 @@ namespace Experiments.Sorting_AI.Scripts
              * 2 = Right arm
              */
             
-            middleArmController.MoveArm(actions.DiscreteActions[0]);
-            leftArmController.MoveArm(actions.DiscreteActions[1]);
-            rightArmController.MoveArm(actions.DiscreteActions[2]);
+            armController.MoveArm(actions.DiscreteActions[0]);
         }
 
         public override void Heuristic(in ActionBuffers actionsOut)
@@ -95,61 +87,14 @@ namespace Experiments.Sorting_AI.Scripts
             var actions = actionsOut.DiscreteActions;
             
             //Middle arm
-            if (Input.GetKey(KeyCode.E)) actions[0] = 0;
-            if (Input.GetKey(KeyCode.I)) actions[0] = 1;
-            
-            //Left arm
-            if (Input.GetKey(KeyCode.Q)) actions[1] = 0;
-            if (Input.GetKey(KeyCode.W)) actions[1] = 1;
-            
-            //Right arm
-            if (Input.GetKey(KeyCode.O)) actions[2] = 0;
-            if (Input.GetKey(KeyCode.P)) actions[2] = 1;
+            if (Input.GetKey(KeyCode.LeftArrow)) actions[0] = 0;
+            if (Input.GetKey(KeyCode.RightArrow)) actions[0] = 1;
+
         }
-        
-        
 
-        private void OnSensorTrigger(GameObject ball, bool approved, string sensorName, SensorType sensorType)
+
+        private void OnObservationSensorTrigger(GameObject ball, bool approved, string sensorName)
         {
-            //Updating the cumulative reward spectator field
-            cumulativeReward = GetCumulativeReward();
-
-            //Checking if the entry sensor. If yes, then new balls need to be spawned
-            if (sensorType == SensorType.Observation)
-            {
-                //Request decision from academy
-                RequestDecision();
-                
-                if (sensorName.Equals("Mid"))
-                {
-                    Debug.Log("Mid fire");
-                    entrySensorMidLastObs = ball.GetComponent<BallController>().GetColor();
-                }
-                
-                if (sensorName.Equals("Left"))
-                {
-                    Debug.Log("Left fire");
-                    entrySensorLeftLastObs = ball.GetComponent<BallController>().GetColor();
-                }
-                
-                if (sensorName.Equals("Right"))
-                {
-                    Debug.Log("Right fire");
-                    entrySensorRightLastObs = ball.GetComponent<BallController>().GetColor();
-                }
-
-                if (approved)
-                {
-                    AddReward(correctSortReward);
-                }
-                else
-                {
-                    AddReward(wrongSortPenalty);
-                }
-                
-                return;
-            }
-
             //Print sensor obs
             Debug.Log($"SensorObs:{ball},{approved},{sensorName}");
 
@@ -168,20 +113,25 @@ namespace Experiments.Sorting_AI.Scripts
             }
 
             //Checking whether the episode should be reset
-            if (_ballsSortedCorrectCount + _ballsSortedIncorrectCount >= maxBallsBeforeResetting)
+            if (_ballsSortedCorrectCount + _ballsSortedIncorrectCount >= maxBallsBeforeResetting && automaticallyClearBalls)
             {
                 AddReward(endGameReward);
                 AgentReset();
             }
         }
 
-        private void RegisterSensors()
+        private void OnEntrySensorTrigger(GameObject ball, bool approved, string sensorName)
         {
-            foreach (Transform child in sensors.transform)
-            {
-                child.gameObject.GetComponent<SensorManager>().SensorTrigger += OnSensorTrigger;
-            }
+            //Updating the cumulative reward spectator field
+            cumulativeReward = GetCumulativeReward();
+            
+            //Request decision from academy
+            RequestDecision();
+                
+            //Setting last obs to the current ball
+            entrySensorLastObs = ball.GetComponent<BallController>().GetColor();
         }
+        
 
         private void AgentReset()
         {

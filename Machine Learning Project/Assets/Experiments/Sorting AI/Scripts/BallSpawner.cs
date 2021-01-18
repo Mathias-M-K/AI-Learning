@@ -8,6 +8,7 @@ namespace Experiments.Sorting_AI.Scripts
 {
     public class BallSpawner : MonoBehaviour
     {
+
         [Header("Ball")] 
         public GameObject ballStartPos;
         public GameObject ballPrefab;
@@ -31,6 +32,7 @@ namespace Experiments.Sorting_AI.Scripts
         
         private void Awake()
         {
+
             _spawnPosition = ballStartPos.transform.position;
             Destroy(ballStartPos);
             
@@ -57,7 +59,7 @@ namespace Experiments.Sorting_AI.Scripts
             }
         }
 
-        public void SpawnNewBall()
+        private void SpawnNewBall()
         {
             GameObject go = Instantiate(ballPrefab, _spawnPosition, Quaternion.Euler(0, 0, 0));
             go.GetComponent<Renderer>().material.color = colors[nextColorInt];
@@ -70,19 +72,7 @@ namespace Experiments.Sorting_AI.Scripts
             nextColorInt = Random.Range(0, colorNames.Length);
             nextColor = colorNames[nextColorInt];
         }
-
-        public string[] GetColors()
-        {
-            return colorNames;
-        }
-
-        public void ClearBalls()
-        {
-            foreach (GameObject ball in _activeBalls)
-            {
-                Destroy(ball);
-            }
-        }
+        
 
         /// <summary>
         /// Returns the index of the parsed color
@@ -102,10 +92,6 @@ namespace Experiments.Sorting_AI.Scripts
             throw new ArgumentException($"Color not found : {color}");
         }
 
-        public void SetMode(SpawnModes mode)
-        {
-            currentMode = mode;
-        }
     }
     public enum SpawnModes{Automatic,Manual}
 }

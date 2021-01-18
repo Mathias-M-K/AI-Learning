@@ -7,7 +7,17 @@ namespace Experiments.Sorting_AI.Scripts
     {
         [Header("Arm Settings")]
         public float rotationTime;
-        
+        public bool lockArm;
+        public Tilt armLockDirection;
+
+        private void Start()
+        {
+            if (lockArm)
+            {
+                MoveArm(armLockDirection);
+            }
+        }
+
         //Current
         private Tilt _currentTilt = Tilt.Right;
 
