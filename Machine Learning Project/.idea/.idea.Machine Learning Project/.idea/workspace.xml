@@ -4,11 +4,6 @@
     <list default="true" id="f6173b77-f2d1-4953-b6d9-9d1959609f93" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Machine Learning Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scenes/Sorting AI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scenes/Sorting AI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/ArmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/ArmController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/BallSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments/Sorting AI/Scripts/SensorManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +101,7 @@
       <workItem from="1610668773099" duration="4069000" />
       <workItem from="1610752977668" duration="2584000" />
       <workItem from="1610794085626" duration="5647000" />
-      <workItem from="1610926618996" duration="5031000" />
+      <workItem from="1610926618996" duration="5551000" />
     </task>
     <servers />
   </component>

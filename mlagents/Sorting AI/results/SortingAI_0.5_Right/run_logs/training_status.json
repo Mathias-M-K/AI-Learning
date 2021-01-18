@@ -1,0 +1,42 @@
+{
+    "Sorting_AI": {
+        "checkpoints": [
+            {
+                "steps": 499904,
+                "file_path": "results\\SortingAI_0.5_Right\\Sorting_AI\\Sorting_AI-499904.onnx",
+                "reward": 10.4068993782175,
+                "creation_time": 1610987452.5135412
+            },
+            {
+                "steps": 999904,
+                "file_path": "results\\SortingAI_0.5_Right\\Sorting_AI\\Sorting_AI-999904.onnx",
+                "reward": 10.50000286102295,
+                "creation_time": 1610995186.0255392
+            },
+            {
+                "steps": 1499904,
+                "file_path": "results\\SortingAI_0.5_Right\\Sorting_AI\\Sorting_AI-1499904.onnx",
+                "reward": 10.50000286102295,
+                "creation_time": 1611002653.0733254
+            },
+            {
+                "steps": 1812004,
+                "file_path": "results\\SortingAI_0.5_Right\\Sorting_AI\\Sorting_AI-1812004.onnx",
+                "reward": 10.496473447014305,
+                "creation_time": 1611007829.9202511
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1812004,
+            "file_path": "results\\SortingAI_0.5_Right\\Sorting_AI.onnx",
+            "reward": 10.496473447014305,
+            "creation_time": 1611007829.9202511
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.23.0",
+        "torch_version": "1.7.0+cu110",
+        "tensorflow_version": -1
+    }
+}
